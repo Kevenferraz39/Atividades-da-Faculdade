@@ -1,6 +1,6 @@
 <h1 align="center">
-  <img align="center" alt="Js" height="30" width="40" src="img/download-removebg-preview.png">
-  <br>
+  <img align="center" alt="Js" height="50" width="50" src="img/download-removebg-preview.png">
+  <br> <br>
    Analise e desnvolvimento de sistemas 
 </h1>
 
