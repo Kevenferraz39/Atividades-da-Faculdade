@@ -46,11 +46,11 @@ Nessa etapa, iremos instalar o Python em um ambiente com sistema operacional Win
 
 1. Faça o download do instalador do Python 3 com a versão mais recente por meio do [site](#).
 
-   ![Página de download do Python](img1.png)
+   ![Página de download do Python](../img1.png)
 
 2. Localize o arquivo de instalação e o execute. Na tela inicial, na parte inferior, selecione a opção “Add Python 3.10 to PATH”, essa opção fará com que o instalador crie as variáveis de sistema no Windows;
 
-   ![Software de instalação do Python](img2.png)
+   ![Software de instalação do Python](../img2.png)
 
 3. Em seguida, clique em “Install Now”;
 
