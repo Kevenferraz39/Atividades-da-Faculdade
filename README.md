@@ -4,8 +4,7 @@
    Analise e desnvolvimento de sistemas 
 </h1>
 
-Esse epositorio esta sendo desenvolvido para Conter as atividades desenvolvidas por mim durante o curso de Java Script
-
+Esse epositorio esta sendo desenvolvido para Conter as atividades desenvolvidas por mim durante o a faculdade
 
 <h4 align="center">
  <a href="https://www.cursoemvideo.com/curso/javascript/aulas/conhecendo-o-javascript/modulos/como-chegamos-ate-aqui/" id="btn">Clique para visitar o curso</a>
