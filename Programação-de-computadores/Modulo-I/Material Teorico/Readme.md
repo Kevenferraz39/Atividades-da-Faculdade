@@ -22,7 +22,7 @@ Python é uma linguagem de programação de aplicação geral e possui uma sinta
 
 ## Leitura
 
-[Duck Typing com Python](#)
+[Duck Typing com Python]()
 
 Como exemplos de aplicações desenvolvidas com Python, podemos destacar:
 
