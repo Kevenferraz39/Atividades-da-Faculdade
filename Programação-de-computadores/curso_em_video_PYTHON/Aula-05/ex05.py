@@ -1,9 +1,12 @@
-a = input('Digite algo:')
-print('O tipo primitivo desse valor é: ', type(a)) 
-print('Só tem espaços ?', a.isspace())
-print('É um número ?', a.isnumeric())
-print('É alfabetico ?', a.isalpha())
-print('É alfanúmerico ?', a.isalnum())
-print('Esta em MAIUSCULO ?', a.isupper())
-print('Esta em minusculo ?', a.islower())
-print('Esta captalizado ?', a.istitle())
+# Operadores aritimeticos
+x = 5
+y = 3
+z = 2
+b = 4
+soma = y * (x + 4) ** z
+"""-----------------------------|
+|soma = y * x + 4 ** z == 3     |
+|soma = y * (x + 4) ** z == 361 |
+|_______________________________|
+"""
+print(soma)
