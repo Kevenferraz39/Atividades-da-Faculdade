@@ -20,7 +20,7 @@ Os operadores aritméticos são utilizados para elaboração e execução de cá
 | **       | Exponenciação      | MinhaVariavel = 2 ** 4  |
 | //       | Divisão Inteira    | MinhaVariavel = 9 // 2  |
 
-### Exemplos de Utilização dos Operadores Aritméticos
+### Exemplos de Utilização dos Operadores Aritméticos(operadores.py)
 
 ```python
 a = 2
@@ -56,7 +56,7 @@ Em Python, a precedência dos operadores determina a ordem de avaliação de uma
 
 Em uma expressão com operadores da mesma prioridade, as operações são executadas da esquerda para a direita.
 
-## Operadores Relacionais
+## Operadores Relacionais(operadores_relacionais.py)
 
 Os operadores relacionais são utilizados para comparar valores entre termos. Em Python, os operadores relacionais são:
 
@@ -69,7 +69,7 @@ Os operadores relacionais são utilizados para comparar valores entre termos. Em
 | >=       | Maior igual | Verifica se o valor do operando esquerdo é maior ou igual   | if(a >= b):                            |
 | <=       | Menor igual | Verifica se o valor do operando esquerdo é menor ou igual   | if(a <= b):                            |
 
-## Operadores Lógicos
+## Operadores Lógicos(Operadores_logicos.py)
 
 Os operadores lógicos são utilizados para combinar expressões condicionais e retornar um valor booleano. Em Python, os operadores lógicos são:
 
@@ -189,7 +189,7 @@ if(condição):
 else:
     bloco de instrução 4
 ```
-
+![Encadeados](../../img/imagem-1.png)
 Vejamos o seguinte cenário. Um programa deve obter as notas A e B e a frequência de um aluno. Para ser considerado aprovado, o aluno deve possuir frequência maior que 75% e nota maior que 6. 
 
 Caso o aluno não possua frequência maior que 75%, será considerado reprovado de forma direta. 
