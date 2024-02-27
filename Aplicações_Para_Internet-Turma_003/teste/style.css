@@ -26,6 +26,7 @@ aside{
     padding: 5px;
     background-color: aqua;
     margin-left: 1rem;
+    margin-right: 1rem;
     padding: 1rem;
 }
 h1{
@@ -43,4 +44,36 @@ h1{
     background-color: red;
     margin-left: auto;
     margin-right: auto;
+}
+
+main{
+    background-color: rgb(222, 222, 18);
+    height: 400px;
+    padding: 1rem;
+    width: 79%;
+    float: right;
+    margin-top: -424px;
+    margin-right: 1rem;
+}
+
+.i1{
+    margin-top: 1rem;
+    width: 49%;
+    height: 50%;
+    background-color: darkgray;
+    float: left;
+}
+.i2{
+    margin-top: 1rem;
+    width: 49%;
+    height: 50%;
+    background-color: darkgray;
+    float: right;
+}
+p{
+    margin-top: 20%;
+    height: 50px;
+    text-align: justify;
+    background-color: white;
+    padding: 2px;
 }
