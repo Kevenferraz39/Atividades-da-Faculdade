@@ -1,0 +1,29 @@
+body{
+    background-color: black; /*cor de fundo */
+    color: white;/*cor de fonte */
+    font-family: Arial, Helvetica, sans-serif; /*familia e fonte, se uma nao estiver disponivel ele vai chamar a seguinte no caso "Helvetica" e assim sucesivamente */
+}
+ul{
+    display: flex;/*O display: flex funciona de uma maneira diferente dos outros displays. Quando colocamos essa propriedade em um elemento, esse elemento se torna um flex container, a partir daí podemos manipular todos os elementos filhos desse flex container com propriedades novas.*/
+    justify-content: space-between;/*justify-content: space-between*/
+    list-style-type: none;/*isso define o tipo de estilo da lista */
+    align-items: center;/*isso centralica o objeto no meio em  sentido de cima e baixo nao lados */
+    padding: 16px;/*isso mexe com o espacamento do lado interior */
+}
+a{
+    color: white;
+    text-decoration: none;/*retira a decoracao do texto*/
+}
+header img{
+    width: 150px;
+    height: 200px;
+    border-radius: 50%;
+    border-radius: color green;
+}
+
+.bor{
+    text-align: center;
+}
+h1{
+    color: green;
+}
