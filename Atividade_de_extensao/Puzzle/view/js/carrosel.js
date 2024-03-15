@@ -2,7 +2,7 @@ const imagens = [
   {
       id: 0,
       nome: "Combo Gaming",
-      img: "img/capa.png",
+      img: "img/Slide-principal.png",
       numero: "1 / 4"
   },
   {

@@ -16,8 +16,8 @@
     --text2:rgb(255, 255, 255);
     --logo:black;
     --logoSpan:#4C8BE4;
-    --body:#E5E8F3;
-    --navbar:#E5E8F3;
+    --body:#eff0f4;
+    --navbar:#eff0f4;
     --box-shadow:#d7d7d7;
 }
 
@@ -162,6 +162,12 @@ nav ul li:hover{
 /*----Media queries-----*/
 /*----Header-----*/
 /* Slideshow container */
+.container-slide{
+    margin-top: 50px;
+    width: 100%;
+    padding: 15px;
+    background-color: var(--body); 
+}
 .slideshow-container {
     max-width: 1000px;
     position: relative;
@@ -253,9 +259,12 @@ nav ul li:hover{
 }
 .card {
     width: 300px;
-    height: 510px;
+    height: 516px;
     background-color: var(--body);
     border-radius: 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--body);
 }
 
 .card img {
