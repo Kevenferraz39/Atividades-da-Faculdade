@@ -5,7 +5,9 @@
 </h1>
 
 Este site está sendo desenvolvido com o propósito de auxiliar os alunos que estão iniciando na carreira de desenvolvimento, oferecendo suporte no estudo, esclarecimento de dúvidas e assistência nas matérias abordadas no curso.
-
+ 
+ 
+<img src="view/img/Design sem nome.png" width="110%" alt="Imagem do site"/>
 <h4 align="center">
  <a href="#" id="btn">Clique para visitar o site</a>
 </h4>
