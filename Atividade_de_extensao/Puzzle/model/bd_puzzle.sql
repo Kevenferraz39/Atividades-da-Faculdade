@@ -34,22 +34,3 @@ CREATE TABLE Progresso (
     FOREIGN KEY (id_exercicio) REFERENCES Exercicios(id)
 );
 
--- inserindo dados
-
-INSERT INTO Administradores (nome, email, senha) VALUES ('Keven Ferraz de Almeida ', 'kevenferraz39@gmail.com', '0408Kw12!');
-
-INSERT INTO Usuarios (nome, email, senha) VALUES ('Joao Pedro Silva', 'jp.silva@gmail.com', 'jp456');
-
-INSERT INTO Exercicios (nome, descricao) VALUES ('Função', 'Crie uma função em js.');
-
-INSERT INTO Progresso (id_usuario, id_exercicio, data_conclusao) VALUES (1, 1, CURDATE());
--- Nesse exemplo, o usuário com ID 1 concluiu o exercício com ID 1 na data atual.
-
-SELECT * FROM Administradores;
-
-SELECT * FROM Usuarios;
-
-SELECT * FROM Exercicios;
-
-SELECT * FROM Progresso WHERE id_usuario = 1;
--- Isso selecionará o progresso do usuário com ID 1.
