@@ -93,10 +93,6 @@ a{
     margin-top:-25px;
 
 }
-#usuario-imagem:hover{
-    transform: translateY(-5px);
-    transition: all 0.6s;
-}
 nav ul{
     display: flex;
     list-style-type: none;
