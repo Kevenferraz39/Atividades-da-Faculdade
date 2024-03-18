@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/login.css">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <title>Home</title>
 </head>
@@ -21,12 +22,43 @@
                             <li><a href="produtos.php">PRODUTOS</a></li>
                             <li><a href="sobre.php">SOBRE</a></li>
                             <li><a href="contato.php">CONTATO</a></li>
-                            <li><a href="#" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">CONTA</a></li>
+                            <li><a href="contato.php" id="conta">CONTA</a></li>
                         </ul>
+                        <a href="#" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><img src="img/perfil-user.png" alt="usuario" id="usuario-imagem"></a>
                     </nav>
                     <div class="nav-icons-container">
                         <img src="./img/menu.png" alt="menu" class="menu-button">
                     </div>
+                    <!--login-->
+            <div id="id01" class="modal">
+  
+              <form class="modal-content animate" action="/action_page.php" method="post">
+                <div class="imgcontainer">
+                  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                  <img src="img/perfil-user.png" alt="Avatar" class="avatar">
+                </div>
+            
+                <div class="container">
+                  <label for="uname"><b>Usuario:</b></label>
+                  <input type="text" placeholder="Entre com o nome de usuario ou email.... " name="uname" required>
+            
+                  <label for="psw"><b>Senha:</b></label>
+                  <input type="password" placeholder="Senha...." name="psw" required>
+                    
+                  <button type="submit" id="but">Login</button>
+                  <button id="but"><a href="cadastro.php">Cadastre-se</a></button><br>
+                  <label>
+                    <input type="checkbox" checked="checked" name="remember"> Lembre-me
+                  </label>
+                </div>
+            
+                <div class="container" style="background-color:#f1f1f1">
+                  <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                  <span class="psw">Esqueceu a <a href="#">Senha?</a></span>
+                </div>
+              </form>
+            </div>
+            <!--login-->
             </div> 
         </div>
         <!-- Slideshow container -->
@@ -62,7 +94,7 @@
 <secction class="cards">
   <div class="container-cards">
     <div class="card">
-      <img src="img/css.png" alt="python-imagem">
+      <img src="img/marca-2.png" alt="python-imagem">
       <h1>CSS</h1>
       <p>Python é uma linguagem de programação de alto nível, valorizada por sua simplicidade, legibilidade e vasta biblioteca padrão. Interpretada e multiplataforma, é ideal para iniciantes e profissionais, permitindo o desenvolvimento de uma ampla gama de aplicações, desde scripts simples até projetos complexos. Sua comunidade ativa contribui para sua constante evolução.
       </p>
@@ -70,7 +102,7 @@
     </div>
 
     <div class="card">
-      <img src="img/js.png" alt="js-imagem">
+      <img src="img/marca-2.png" alt="js-imagem">
       <h1>JAVA SCRIPT</h1>
         <div class="texto">
           <p>JavaScript é uma linguagem de programação de alto nível, amplamente utilizada para desenvolvimento web. Ela permite interações dinâmicas em páginas da web, manipulando o conteúdo e o comportamento do navegador do usuário. É uma linguagem interpretada, executada no lado do cliente, e possui uma sintaxe flexível e poderosa.
@@ -80,7 +112,7 @@
       
     </div>
     <div class="card">
-      <img src="img/php.png" alt="html-imagem">
+      <img src="img/marca-2.png" alt="html-imagem">
       <h1>PHP</h1>
       <p>PHP é uma linguagem de script de código aberto, amplamente usada para desenvolvimento web. Integra-se bem ao HTML e pode gerar conteúdo dinâmico. É fácil de aprender e suporta uma ampla gama de bancos de dados, tornando-o uma escolha popular para criar sites dinâmicos e aplicativos da web.
       </p>
@@ -88,7 +120,7 @@
     </div>
 
     <div class="card">
-      <img src="img/sql.png" alt="sql-imagem">
+      <img src="img/marca-2.png" alt="sql-imagem">
       <h1>SQL</h1>
       <p>SQL (Structured Query Language) é uma linguagem de programação usada para gerenciar e manipular bancos de dados relacionais. Permite a criação, consulta, atualização e exclusão de dados de forma eficiente, facilitando o armazenamento e recuperação de informações em sistemas de gerenciamento de banco de dados como MySQL, PostgreSQL e SQL Server.
       </p>
