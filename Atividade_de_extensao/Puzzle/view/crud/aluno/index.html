@@ -1,7 +1,3 @@
-<?php
-    include_once('../../../controller/login/verificarSessao.php');
-    include_once('../../../controller/crud/aluno/consultar.php');
-?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -127,5 +123,53 @@
     <!--  fim do footer -->
 
     <script src="../../JS/dropdownConta.js"></script>
+
+    <!-- JavaScript para verificar sessão e consultar aluno -->
+    <script>
+        // Função para verificar a sessão do usuário
+        function verificarSessao() {
+            // Realiza uma requisição AJAX para verificar a sessão
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === XMLHttpRequest.DONE) {
+                    if (xhr.status === 200) {
+                        // Sessão válida
+                        console.log('Sessão válida.');
+                    } else {
+                        // Sessão inválida
+                        console.error('Sessão inválida. Redirecionando para a página de login.');
+                        // Redirecionar para a página de login
+                        window.location.href = 'caminho/para/pagina/login.html';
+                    }
+                }
+            };
+            xhr.open('GET', 'caminho/para/arquivo/verificarSessao.php', true);
+            xhr.send();
+        }
+
+        // Função para consultar informações sobre o aluno
+        function consultarAluno() {
+            // Realiza uma requisição AJAX para consultar as informações do aluno
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === XMLHttpRequest.DONE) {
+                    if (xhr.status === 200) {
+                        var aluno = JSON.parse(xhr.responseText);
+                        // Faça o que precisar com os dados do aluno aqui
+                        console.log('Dados do aluno:', aluno);
+                    } else {
+                        console.error('Erro ao consultar informações do aluno.');
+                    }
+                }
+            };
+            xhr.open('GET', 'caminho/para/arquivo/consultar.php', true);
+            xhr.send();
+        }
+
+        // Chamada das funções
+        verificarSessao();
+        consultarAluno();
+    </script>
+    <!-- Fim do JavaScript para verificar sessão e consultar aluno -->
 </body>
 </html>
