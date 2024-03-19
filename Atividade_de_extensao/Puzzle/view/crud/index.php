@@ -1,8 +1,7 @@
 <?php 
-     session_start();
-
-     include_once('../config/loginAdm.php');
+    include_once('../../controller/login/verificarSessao.php');
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -27,6 +26,7 @@
                             <li><a href="produtos.php">PRODUTOS</a></li>
                             <li><a href="sobre.php">SOBRE</a></li>
                             <li><a href="contato.php">CONTATO</a></li>
+                            <li><a href="../../view/crud/" id="conta">CRUD</a></li>
                             <li><a href="contato.php" id="conta">CONTA</a></li>
                         </ul>
                         <a href="#" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><img src="img/perfil-user.png" alt="usuario" id="usuario-imagem"></a>

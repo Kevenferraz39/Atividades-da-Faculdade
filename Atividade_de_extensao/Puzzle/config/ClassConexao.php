@@ -26,15 +26,4 @@
                 die();
             }
         }
-
-        //Função utilizando PDO:
-       /* function conectarBanco() {
-            try {
-                $this->conexao = new PDO('mysql:host='.HOST.';dbname='.DATABASE, USER, SENHA);
-            }
-            catch (PDOException $e) {
-                echo 'ERRO! '.$e->getMessage();
-                die();
-            }
-        } */
     }

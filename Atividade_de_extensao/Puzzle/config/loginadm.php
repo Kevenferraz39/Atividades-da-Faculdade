@@ -12,6 +12,6 @@
         $nome = "Puzzle";
         $senhapass = password_hash(($senhaAdm), PASSWORD_DEFAULT);
         
-        $sql->inserirBD('Usuarios', 'nome, email, senha', "'$nome', '$emailAdm', '$senhapass'");
+        $sql->inserirBD('aluno', 'nome, email, senha', "'$nome', '$emailAdm', '$senhapass'");
     }
 ?>

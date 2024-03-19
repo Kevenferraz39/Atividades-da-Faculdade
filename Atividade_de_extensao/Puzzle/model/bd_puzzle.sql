@@ -3,15 +3,15 @@ USE bd_puzzle;
 
 --  Criação da tabela para usuários administradores
 CREATE TABLE Administradores (
-    idAdministradores INT PRIMARY KEY AUTO_INCREMENT,
+    idAdm INT PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(100),
     email VARCHAR(100) UNIQUE,
     senha VARCHAR(100)
 );
 
 -- Criação da tabela para usuários com acesso aos exercícios
-CREATE TABLE Usuarios (
-    idUsuarios INT PRIMARY KEY AUTO_INCREMENT,
+CREATE TABLE aluno (
+    idAluno INT PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(100),
     email VARCHAR(100) UNIQUE,
     senha VARCHAR(100)
@@ -26,7 +26,7 @@ CREATE TABLE Exercicios (
 
 -- Criação da tabela para o progresso dos usuários nos exercícios
 CREATE TABLE Progresso (
-    id INT PRIMARY KEY AUTO_INCREMENT,
+    idProgresso INT PRIMARY KEY AUTO_INCREMENT,
     id_usuario INT,
     id_exercicio INT,
     data_conclusao DATE,
