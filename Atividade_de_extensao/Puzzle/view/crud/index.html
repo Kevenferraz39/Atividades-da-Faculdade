@@ -1,7 +1,7 @@
-<?php 
+<!--<?php 
     include_once('../../controller/login/verificarSessao.php');
 ?>
-
+-->
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -185,6 +185,31 @@
   <hr><br>
   <center><p>© Puzzle. Todos os direitos reservados.</p></center>
 </footer>
+<script>
+  // Função para fazer uma requisição AJAX
+function includePHPFile(url, callback) {
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+            if (xhr.status === 200) {
+                callback(xhr.responseText);
+            } else {
+                console.error('Erro ao carregar o arquivo PHP:', xhr.status);
+            }
+        }
+    };
+    xhr.open('GET', url, true);
+    xhr.send();
+}
+
+// Chamada para incluir o arquivo PHP
+includePHPFile('../../controller/login/verificarSessao.php', function(response) {
+    // Aqui você pode usar o conteúdo do arquivo PHP, que está na variável 'response'
+    console.log('Conteúdo do arquivo PHP:', response);
+    // Faça o que precisar com o conteúdo aqui
+});
+
+</script>
     <script src="js/home.js"></script>
     <script src="js/carrosel.js"></script>
 </body>

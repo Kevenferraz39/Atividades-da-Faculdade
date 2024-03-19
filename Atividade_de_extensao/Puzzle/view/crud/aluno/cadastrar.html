@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Aluno</title>
+</head>
+<body>
+    <a href="./index.php">Voltar</a>
+    <form id="cadastroForm">
+        <div>
+            <label>Nome:</label>
+            <input type="text" name="nome" id="nome">
+        </div>
+        <div>
+            <label>Email:</label>
+            <input type="text" name="email" id="email">
+        </div>
+        <div>
+            <label>Senha:</label>
+            <input type="text" name="senha" id="senha">
+        </div>
+        <input type="submit" value="Cadastrar">
+    </form>
+
+    <script>
+        // Intercepta o evento de submissão do formulário
+        document.getElementById("cadastroForm").addEventListener("submit", function(event) {
+            // Previne o comportamento padrão do formulário (envio via requisição GET/POST)
+            event.preventDefault();
+
+            // Obtém os valores dos campos do formulário
+            var nome = document.getElementById("nome").value;
+            var email = document.getElementById("email").value;
+            var senha = document.getElementById("senha").value;
+
+            // Cria um objeto com os dados a serem enviados
+            var formData = new FormData();
+            formData.append('nome', nome);
+            formData.append('email', email);
+            formData.append('senha', senha);
+
+            // Realiza uma requisição AJAX para o backend
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === XMLHttpRequest.DONE) {
+                    if (xhr.status === 200) {
+                        // Caso o cadastro seja bem sucedido, exibe uma mensagem de sucesso
+                        alert('Cadastro realizado com sucesso!');
+                    } else {
+                        // Caso ocorra algum erro no cadastro, exibe uma mensagem de erro
+                        alert('Erro ao cadastrar aluno. Por favor, tente novamente.');
+                    }
+                }
+            };
+
+            // Define o método, URL e dados a serem enviados na requisição
+            xhr.open("POST", "../../../controller/crud/aluno/cadastrar.js");
+            xhr.send(formData);
+        });
+    </script>
+</body>
+</html>
