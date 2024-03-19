@@ -1,0 +1,45 @@
+:root{
+    --teme:#438DFB;
+    --teme2:#0c336d;
+    --teme-title:#0550bf;
+    --teme-hover:#4C8BE4;
+    --text:black;
+    --text2:rgb(255, 255, 255);
+    --slogan:#6a6a6a;
+    --slogan2:#6a6a6a3c;
+    --logo:black;
+    --logoSpan:#4C8BE4;
+    --body:#eff0f4;
+    --navbar:#eff0f4;
+    --box-shadow:#d7d7d7;
+}
+.informations-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 680px; 
+}
+
+.information-container {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    text-align: center; 
+    overflow: hidden;
+}
+
+.information-container h1 {
+    font-size: 250px;
+    font-weight: bolder;
+    color: var(--slogan2);
+}
+
+.information-container p {
+    margin-top: 0; /* Remova a margem superior anterior */
+    margin-bottom: 0; /* Remova a margem inferior anterior */
+    font-size: 30px;
+    font-weight: bold;
+    width: 100%;
+    margin-left: 0px;
+    color:var(--slogan);
+}

@@ -3,25 +3,21 @@ const imagens = [
       id: 0,
       nome: "Combo Gaming",
       img: "img/Slide-principal.png",
-      numero: "1 / 4"
   },
   {
       id: 1,
       nome: "Combo Gaming",
-      img: "img/capa.png",
-      numero: "2 / 4"
+      img: "img/PUZZLE.png",
   },
   {
     id: 2,
     nome: "Combo Gaming",
-    img: "img/capa.png",
-    numero: "3 / 4"
+    img: "img/gif/PUZZLE.gif",
   },
   {
     id: 3,
     nome: "Combo Gaming",
     img: "img/capa.png",
-    numero: "4 / 4"
   },
 ];
 
@@ -30,8 +26,8 @@ function iniciarSite() {
   imagens.forEach((val) => {
     slideContainer.innerHTML += `
     <div class="mySlides fade">
-      <div class="numbertext">${val.numero}</div>
-      <center><img src="${val.img}" alt="${val.nome}" style="width:100%"></center>
+      <center><img src="${val.img}" alt="${val.nome}" style="width:100%">
+      </center>
     </div>`;
   });
 }
@@ -70,4 +66,4 @@ function showSlides(n) {
 // Slide automático
 setInterval(() => {
   plusSlides(1);
-}, 15000); // Altere o tempo aqui, por exemplo, 2000 para 2 segundos.
+}, 5000); // Altere o tempo aqui, por exemplo, 2000 para 2 segundos.
