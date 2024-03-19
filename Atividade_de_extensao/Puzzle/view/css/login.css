@@ -48,7 +48,7 @@ button {
   margin: 8px 0;
   border: none;
   cursor: pointer;
-  width: 100%;
+  width: calc(50% - 20px);
 }
 
 #but{
@@ -59,7 +59,8 @@ button {
     margin: 8px 0;
     border: none;
     cursor: pointer;
-    width: 20rem;
+    width: calc(50% - 20px);
+    margin-left: 12px;
   }
   #but a{
     padding: 14px 30px;
