@@ -15,15 +15,15 @@
     <link rel="stylesheet" href="../../_css/tabelasCrud.css">
     <!-- fim-css -->
     <link rel="shortcut icon" href="../../_img/logo.png" type="image/x-icon">
-    <title>Exercicios</title> 
+    <title>Lista</title> 
 </head> 
 <body>
      <!-- Menu -->
-     <header class="Home">     
+<header class="Home">     
     <a href="Menu.html">
     <img src="../../_img/Logo-SemFundo.png" alt="foto" id="logo"/></a>
         <div class="link">
-            <li class="focus"><b><a href="./">Exercício</a></b></li>
+            <li class="focus"><b><a href="./">Lista</a></b></li>
             <li class="linke"><b><a href="../index.php">CRUD</a></b></li>
         </div>
 </header>
@@ -35,41 +35,36 @@
         <div id="container-conteudo-tabela">
             <div class="top">
                     <img src="../../_img/Logo-SemFundo.png">
-                    <h3>Exercicios cadastrados</h3>     
+                    <h3>Lista</h3>     
             </div>
             <div class="conteudo-tabela">
             <table>
-            <thead>
-                <tr>
-                    <th>Id</th>
-                    <th>Resposta</th>
-                    <th>Lista</th>
-                    <th>...</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php 
-                    include_once('../../../controller/crud/exercicio/consultar.php');
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>NOME DE LISTA</th>
+                        <th>...</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                        include_once('../../../controller/crud/lista/consultar.php');
 
-                    while ($dados = mysqli_fetch_assoc($resultado)) {
-                        $sql = new Crud();
-                        $sql->consultarItem('nomeLista', 'lista', 'idLista', $dados['idLista']);
-                        $result = $sql->getResultado();
-                        $dado = mysqli_fetch_assoc($result);
-                        $lista = $dado['nomeLista'];
-                ?>
-                <tr>
-                    <td> <?= $dados['idExercicio'] ?> </td>
-                    <td> <?= $dados['resposta'] ?> </td>
-                    <td> <?= $lista ?> </td>
-                    <td> <a href="<?= "editar.php?id=$dados[idExercicio]" ?>">Editar</a> <a href="<?= "excluir.php?id=$dados[idExercicio]" ?>">Excluir</a> </td>
-                </tr>
-                <?php } ?>
-            </tbody>
-        </table>
+                        while ($dados = mysqli_fetch_assoc($resultado)) {
+                    ?>
+
+                        <tr>
+                            <td> <?= ($dados['idLista']); ?> </td>
+                            <td> <?=  ($dados['nomeLista']); ?> </td>
+                            <td> <a href="<?= "editar.php?id=$dados[idLista]"; ?>">Editar</a> <a href="<?= "excluir.php?id=$dados[idLista]"; ?>">Excluir</a> </td>
+                        </tr>
+                    <?php } ?>
+                </tbody>
+            </table>
+            <br>
             </div><br><br>
                 <a href="../index.php" class="btv">Voltar</a>
-                <a href="cadastrar.php" class="bt">Cadastrar Novo Exercício</a>
+                <a href="cadastrar.php" class="bt">Cadastrar Nova Lista</a>
         </div>
     </center>
         <!--Start of Tawk.to Script-->

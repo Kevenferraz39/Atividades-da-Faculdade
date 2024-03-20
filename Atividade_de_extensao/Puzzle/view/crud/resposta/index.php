@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="../../_css/tabelasCrud.css">
     <!-- fim-css -->
     <link rel="shortcut icon" href="../../_img/logo.png" type="image/x-icon">
-    <title>Exercicios</title> 
+    <title>Respostas</title> 
 </head> 
 <body>
      <!-- Menu -->
@@ -23,7 +23,7 @@
     <a href="Menu.html">
     <img src="../../_img/Logo-SemFundo.png" alt="foto" id="logo"/></a>
         <div class="link">
-            <li class="focus"><b><a href="./">Exercício</a></b></li>
+            <li class="focus"><b><a href="./">Respostas</a></b></li>
             <li class="linke"><b><a href="../index.php">CRUD</a></b></li>
         </div>
 </header>
@@ -35,41 +35,39 @@
         <div id="container-conteudo-tabela">
             <div class="top">
                     <img src="../../_img/Logo-SemFundo.png">
-                    <h3>Exercicios cadastrados</h3>     
+                    <h3>Respostas cadastradas</h3>     
             </div>
             <div class="conteudo-tabela">
-            <table>
+             <table>
             <thead>
                 <tr>
                     <th>Id</th>
                     <th>Resposta</th>
-                    <th>Lista</th>
+                    <th>Exercício</th>
+                    <th>Aluno</th>
                     <th>...</th>
                 </tr>
             </thead>
             <tbody>
                 <?php 
-                    include_once('../../../controller/crud/exercicio/consultar.php');
+                    include_once('../../../controller/crud/resposta/consultar.php');
 
                     while ($dados = mysqli_fetch_assoc($resultado)) {
-                        $sql = new Crud();
-                        $sql->consultarItem('nomeLista', 'lista', 'idLista', $dados['idLista']);
-                        $result = $sql->getResultado();
-                        $dado = mysqli_fetch_assoc($result);
-                        $lista = $dado['nomeLista'];
                 ?>
                 <tr>
-                    <td> <?= $dados['idExercicio'] ?> </td>
+                    <td> <?= $dados['idResposta'] ?> </td>
                     <td> <?= $dados['resposta'] ?> </td>
-                    <td> <?= $lista ?> </td>
-                    <td> <a href="<?= "editar.php?id=$dados[idExercicio]" ?>">Editar</a> <a href="<?= "excluir.php?id=$dados[idExercicio]" ?>">Excluir</a> </td>
+                    <td> <?= $dados['idExercicio'] ?> </td>
+                    <td> <?= $dados['idAluno'] ?> </td>
+                    <td> <a href="<?= "editar.php?id=$dados[idResposta]" ?>">Editar</a> <a href="<?= "excluir.php?id=$dados[idResposta]" ?>">Excluir</a> </td>
                 </tr>
                 <?php } ?>
             </tbody>
         </table>
+            <br>
             </div><br><br>
                 <a href="../index.php" class="btv">Voltar</a>
-                <a href="cadastrar.php" class="bt">Cadastrar Novo Exercício</a>
+                <a href="cadastrar.php" class="bt">Cadastrar Nova Resposta</a>
         </div>
     </center>
         <!--Start of Tawk.to Script-->

@@ -1,4 +1,4 @@
-<?php 
+<?php
     include_once('../../../controller/login/verificarSessao.php');
 
     if (isset($_GET['id'])) {
@@ -18,36 +18,38 @@
 
     }
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Editar Aluno</title>
+    <title>Excluir Aluno</title>
 </head>
 <body>
     <a href="./index.php">Voltar</a>
-    <form action="../../../controller/crud/aluno/editar.php" method="post">
+    <form method="post" action="../../../controller/crud/aluno/excluir.php">
         <div>
-            <input type="text" name="id" value=" <?= $id ?> " hidden>
+            <p>Deseja realmente excluir este item?</p>
+            <input type="text" name="id" value="<?= $id ?>" hidden>
             <div>
                 <label for="">Nome:</label>
-                <input type="text" name="nome" value="<?= $nome ?>">
+                <input type="text" name="nome" value="<?= $nome ?>" readonly>
             </div>
             <div>
                 <label for="">Email:</label>
-                <input type="text" name="email" value="<?= $email ?>">
+                <input type="text" name="email" value="<?= $email ?>" readonly>
             </div>
             <div>
                 <label for="">Senha:</label>
-                <input type="text" name="senha" value="<?= $senha ?>">
+                <input type="text" name="senha" value="<?= $senha ?>" readonly>
             </div>
             <div>
                 <label for="">Pontos:</label>
-                <input type="number" name="pontos" value="<?= $pontos ?>">
+                <input type="text" name="pontos" value="<?= $pontos ?>" readonly>
             </div>
-                
-            <input type="submit" value="Editar">
+            <br>
+            <input type="submit" value="Confirmar">
         </div>
     </form>
 </body>
