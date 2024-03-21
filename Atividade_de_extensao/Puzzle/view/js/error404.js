@@ -10,7 +10,7 @@ document.addEventListener('click', function(event) {
                 // Verifica o status da resposta
                 if (!response.ok) {
                     // Se a resposta não for bem-sucedida (404), redireciona para a página de erro 404
-                    window.location.href = 'error404.html';
+                    window.location.href = 'error404.php';
                 }
             })
             .catch(function(error) {

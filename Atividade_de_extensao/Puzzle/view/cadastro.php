@@ -47,7 +47,7 @@
                 <input class="fonte" type="password" name="senhaConf" placeholder="Confirme a sua senha..."
                     required><br><br>
                 <input type="submit" value="Cadastrar" id="btn-cadastrar"><br><br>
-                <a href="menu.html" id="btn-voltar">Cancelar</a>
+                <a href="home.php" id="btn-voltar">Cancelar</a>
             </form>
             <div class="loading" id="loading"></div>
     </center>

@@ -45,7 +45,7 @@ document.getElementById('form-cadastro').addEventListener('submit', function(eve
         var tempoTotal = Math.max(pageLoadTime, estimatedDataLoadTime); // Tempo total é o máximo entre o tempo de carregamento da página e o tempo estimado de carregamento dos dados
         
         setTimeout(function() {
-            window.location.href = 'loadingPage.html'; // Redireciona para a página de carregamento
+            window.location.href = 'loadingPage.php'; // Redireciona para a página de carregamento
         }, tempoTotal);
     }, 1); // Simulação de envio de dados em 1 segundo (1000ms)
 });
