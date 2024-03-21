@@ -3,8 +3,8 @@
     define('HOST', 'localhost');
     define('USER', 'root');
     define('SENHA', '');
-    define('DATABASE', 'bdpraticode');
-
+    define('DATABASE', 'bd_Puzzle');
+ß
 
     //criando uma classe de conexão
     class Conexao {
