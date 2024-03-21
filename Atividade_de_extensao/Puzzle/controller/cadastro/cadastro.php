@@ -18,6 +18,6 @@
             header('Location: ../../view/home.php');
         } else {
             echo "Senha incorreta";
-        }ß
+        }
     }
 ?>

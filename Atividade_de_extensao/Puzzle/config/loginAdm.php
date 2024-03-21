@@ -14,4 +14,4 @@
         
         $sql->inserirBD('aluno', 'nome, email, senha', "'$nome', '$emailAdm', '$senhapass'");
     }
-?>ß
+?>

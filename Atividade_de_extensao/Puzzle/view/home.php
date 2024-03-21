@@ -1,6 +1,7 @@
-<?php
-  session_start();
-  include_once('../config/loginAdm.php');
+<?php 
+     session_start();
+
+     include_once('../config/loginAdm.php');
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">

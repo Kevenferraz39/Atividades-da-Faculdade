@@ -1,8 +1,9 @@
-<?php
-    session_start();
-    if(isset($_SESSION['email']) and isset($_SESSION['senha']){
-        header(Location: home.php);
-    }
+<?php 
+     session_start();
+    
+     if (isset($_SESSION['email']) and isset($_SESSION['senha'])) {
+         header('Location: home.php');
+     }
 ?>
 
 <!DOCTYPE html>
@@ -14,7 +15,7 @@
     <link rel="stylesheet" href="css/Cadastro.css">
     <link rel="stylesheet" href="css/loader.css">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-    <title>Home</title>
+    <title>Cadastro de usuarios</title>
 </head>
 <body>
     <div class="navbar">

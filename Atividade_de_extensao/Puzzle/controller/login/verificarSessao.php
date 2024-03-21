@@ -4,9 +4,9 @@
 
     if (isset($_SESSION['email']) && isset($_SESSION['senha'])) {
         if ($_SESSION['email'] != $emailAdm && $_SESSION['senha'] != $senhaAdm) {
-            header('Location: /puzzle-website/');
+            header('Location: /Puzzle-website/');
        }
     } else {
-        header("Location: /puzzle-website/");
+        header("Location: /Puzzle-website/");
     }
 ?>

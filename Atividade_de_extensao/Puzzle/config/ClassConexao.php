@@ -3,8 +3,8 @@
     define('HOST', 'localhost');
     define('USER', 'root');
     define('SENHA', '');
-    define('DATABASE', 'bd_Puzzle');
-ß
+    define('DATABASE', 'bd_puzzle');
+
 
     //criando uma classe de conexão
     class Conexao {
@@ -26,15 +26,4 @@
                 die();
             }
         }
-
-        //Função utilizando PDO:
-       /* function conectarBanco() {
-            try {
-                $this->conexao = new PDO('mysql:host='.HOST.';dbname='.DATABASE, USER, SENHA);
-            }
-            catch (PDOException $e) {
-                echo 'ERRO! '.$e->getMessage();
-                die();
-            }
-        } */
     }
