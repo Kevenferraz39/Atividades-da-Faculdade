@@ -1,3 +1,10 @@
+<?php
+    session_start();
+    if(isset($_SESSION['email']) and isset($_SESSION['senha']){
+        header(Location: home.php);
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>

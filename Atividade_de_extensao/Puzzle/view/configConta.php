@@ -2,7 +2,7 @@
     session_start();
         
     if (!isset($_SESSION['email']) and !isset($_SESSION['senha'])) {
-        header('Location: menu.php');
+        header('Location: home.php');
     }
     $logado = $_SESSION['email'];
 ?>
