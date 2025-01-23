@@ -1,6 +1,6 @@
-
-
-
+#Passo 2: Instalar Dependências
+#No terminal, execute os comandos abaixo para instalar as bibliotecas necessárias:
+#pip install gspread pandas
 
 import gspread # type: ignore
 import pandas as pd # type: ignore
