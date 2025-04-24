@@ -36,17 +36,25 @@ credentials = ServiceAccountCredentials.from_json_keyfile_name(credentials_path,
 gc = gspread.authorize(credentials)
 
 # URL ou ID da planilha
+<<<<<<< HEAD
 '''
 sheet_url = "https://docs.google.com/spreadsheets/d/18gDwt_l3Osz3EKxNbJWOmJQYcre6L8Za5JH6VR3KrWg/edit?gid=0#gid=0"
 '''
 
 sheet_url = "https://docs.google.com/spreadsheets/d/1tXi9nfe-OMFI5dc711H74vIYCRy03j5bKpV5ejTcyzE/edit?gid=0#gid=0"
+=======
+sheet_url = "https://docs.google.com/spreadsheets/d/18gDwt_l3Osz3EKxNbJWOmJQYcre6L8Za5JH6VR3KrWg/edit?gid=0#gid=0"
+>>>>>>> 4951182cb7d68b4b57be8c83534057bf7ae414be
 
 # Abrindo a planilha
 spreadsheet = gc.open_by_url(sheet_url)
 
 # Selecionando a aba (worksheet)
+<<<<<<< HEAD
 worksheet = spreadsheet.worksheet("Página1")  # certifique-se que esse é o nome correto
+=======
+worksheet = spreadsheet.worksheet("Historico-Gera")  # certifique-se que esse é o nome correto
+>>>>>>> 4951182cb7d68b4b57be8c83534057bf7ae414be
 
 # Lendo os dados da planilha
 data = worksheet.get_all_records()
@@ -60,7 +68,11 @@ print(df.head())
 
 # Caminho para salvar o arquivo JSON
 output_dir = "c:/Users/kferraz/Documents/GitHub/Atividades-da-Faculdade/Banco_de_dados_json"
+<<<<<<< HEAD
 output_path = os.path.join(output_dir, "baseABS.json")
+=======
+output_path = os.path.join(output_dir, "historico2.json")
+>>>>>>> 4951182cb7d68b4b57be8c83534057bf7ae414be
 
 # Exportando para JSON
 df.to_json(output_path, orient="records", force_ascii=False, indent=4)

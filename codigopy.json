@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
     "type": "service_account",
     "project_id": "codigopy",
@@ -12,3 +13,6 @@
     "universe_domain": "googleapis.com"
   }
   
+=======
+{"instrucoes":"antes de usar o codigo de gerar json entre aqui para criar uma chave de api chttps://console.cloud.google.com/iam-admin/serviceaccounts/details/106733857539979484986/keys?hl=pt-BR&invt=AbtXwg&project=codigopy"}
+>>>>>>> 4951182cb7d68b4b57be8c83534057bf7ae414be
