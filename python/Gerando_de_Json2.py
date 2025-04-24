@@ -28,8 +28,11 @@ scopes = [
     "https://www.googleapis.com/auth/drive"
 ]
 
-# Caminho para o arquivo JSON com as credenciais da conta de serviço
-credentials_path = "c:/Users/kferraz/Documents/GitHub/Atividades-da-Faculdade/codigopy.json"
+
+# json no projeto credentials_path = "c:/Users/kferraz/Documents/GitHub/Atividades-da-Faculdade/codigopy.json"
+
+#json na maquina
+credentials_path = "c:/Users/kferraz/Documents/programação/chave010908780.json"
 credentials = ServiceAccountCredentials.from_json_keyfile_name(credentials_path, scopes)
 
 # Autenticando
