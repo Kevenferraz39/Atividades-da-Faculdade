@@ -32,7 +32,7 @@ scopes = [
 # json no projeto credentials_path = "c:/Users/kferraz/Documents/GitHub/Atividades-da-Faculdade/codigopy.json"
 
 #json na maquina
-credentials_path = "c:/Users/kferraz/Documents/programação/chave010908780.json"
+credentials_path = "C:/Users/kferraz/Documents/programacao/chave010908780.json"
 credentials = ServiceAccountCredentials.from_json_keyfile_name(credentials_path, scopes)
 
 # Autenticando
@@ -44,7 +44,7 @@ gc = gspread.authorize(credentials)
 sheet_url = "https://docs.google.com/spreadsheets/d/18gDwt_l3Osz3EKxNbJWOmJQYcre6L8Za5JH6VR3KrWg/edit?gid=0#gid=0"
 '''
 
-sheet_url = "https://docs.google.com/spreadsheets/d/18gDwt_l3Osz3EKxNbJWOmJQYcre6L8Za5JH6VR3KrWg/edit?gid=0#gid=0"
+sheet_url = "https://docs.google.com/spreadsheets/d/1tXi9nfe-OMFI5dc711H74vIYCRy03j5bKpV5ejTcyzE/edit?gid=0#gid=0"
 
 
 # Abrindo a planilha
