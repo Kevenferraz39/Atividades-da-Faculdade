@@ -24,7 +24,7 @@ Atividades desenvolvidas:
 
 Neste curso utilizei as seguintes tecnologias:
 
-## 📂Softewres utilizados
+## 📂Softewres utilizados.  
 
 Neste curso utilizei os seguintes softewres:
 

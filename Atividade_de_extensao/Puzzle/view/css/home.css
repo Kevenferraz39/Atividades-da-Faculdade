@@ -1,0 +1,407 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+}
+:root{
+    --teme:#438DFB;
+    --teme2:#0c336d;
+    --teme-title:#0550bf;
+    --teme-hover:#4C8BE4;
+    --text:black;
+    --text2:rgb(255, 255, 255);
+    --slogan:#6a6a6a;
+    --logo:black;
+    --logoSpan:#4C8BE4;
+    --body:#eff0f4;
+    --navbar:#eff0f4;
+    --box-shadow:#d7d7d7;
+}
+
+body{
+    background-color: var(--body);
+    overflow-x: hidden;
+}
+body::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  body::-webkit-scrollbar-track {
+    background: #f1f1f123; 
+  }
+   
+  /* Handle */
+  body::-webkit-scrollbar-thumb {
+    background: #888; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  body::-webkit-scrollbar-thumb:hover {
+    background: var(--teme-hover); 
+    border-radius: 10px;
+  }
+
+a{
+    text-decoration: none;
+}
+
+/*----Header-----*/
+.header-inner-contet{
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.navbar{
+    background-color: var(--navbar);
+    padding: 1rem;
+    position: sticky;/*para que ele fique no topo*/
+    top: 0;
+    box-shadow: 10px 0 10px var(--box-shadow);
+    z-index: 99;/*para que ele fique acipa dos outros itens*/
+}
+.navbar>div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    position: relative;
+}
+.logo{
+    font-weight: bolder;
+    letter-spacing: 2px;
+    color: var(--logo);
+}
+.logo span{
+    font-weight: bolder;
+    letter-spacing: 2px;
+    color:var(--logoSpan);
+}
+.logoFoto{
+    width: 70px;
+    display: none;
+}
+#usuario-imagem{
+    width: 40px;
+    float: right;
+    margin-right: -250px;
+    margin-top:-25px;
+
+}
+nav ul{
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+}
+.nav-icons-container{
+    display: flex;
+    align-items: center;
+
+}
+.nav-icons-container img{
+    width: 50px;
+    cursor: pointer;
+}
+.nav-icons-container .carrinhoimg{
+    width: 30px;
+    cursor: pointer;
+}
+.nav-icons-container img:first-child{
+    margin-right: 1rem;
+}
+nav ul li{
+    color: var(--text);
+    font-weight: bolder;
+    margin-right: 1.5rem;
+    cursor: pointer;
+}
+nav ul li:hover{
+    color:var(--teme);
+    transform: translateY(-5px);
+    transition: all 0.6s;
+    
+}nav a{
+    color: var(--color3);
+}
+#conta{
+    display:none;
+}
+.menu-button{
+    display: none;
+}
+/*----Media queries-----*/
+
+@media (max-width: 800px) {
+    .logo{
+        display: none;
+    }
+    .logoFoto{
+        display: block;
+        margin-left: -18rem;
+    }
+    .menu-button{
+        display: block;
+    }
+    .header-botton-side{
+        flex-direction: column;
+        text-align: center;
+        padding-top: 4rem;
+    }
+    nav{
+        position: absolute;
+        background-color: var(--body);
+        width: 100%;
+        top: 70px;
+        display: none;
+    }
+    .show-menu nav{
+        display: block;
+    }
+    nav ul{
+        flex-direction: column;
+    }
+    nav ul li{
+        text-align: center;
+        padding: 0.8rem;
+    }
+    #usuario-imagem{
+        display: none;
+    }
+    #conta{
+        display:block;
+    }
+}
+@media (max-width: 600px){
+    .logoFoto{
+        display: block;
+        margin-left: -15rem;
+    }
+}
+@media (max-width: 500px){
+    .logoFoto{
+        display: block;
+        margin-left: -13rem;
+    }
+}
+/*----Media queries-----*/
+/*----Header-----*/
+/* Slideshow container */
+.container-slide{
+    margin-top: 40px;
+    width: 100%;
+    padding: 15px;
+    background-color: var(--body); 
+}
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: var(--teme);
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.37);
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: var(--text);
+    font-size: 12px;
+    font-weight: bold;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: var(--teme);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color:var(--teme-title);
+  }
+  
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+  /*cards*/
+  header{
+   background-color: var(--body);
+}
+.header-botton-side{
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    padding: 1rem;
+}
+.header-botton-side-left{
+    height: 100%;
+    flex-basis: 50%;
+}
+.header-botton-side-left h1{
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--teme-title);
+    font-weight: bolder;
+    margin-bottom: 20px;
+}
+.header-botton-side-left p{
+    line-height: 1.5rem;
+    margin-bottom: 1.5rem;
+    color:var(--slogan);
+    font-size: 1.3rem;
+}
+.header-botton-side-left button{
+    background-color: var(--teme2);
+    color: var(--text2);
+    border: none;
+    cursor: pointer;
+    padding: 0.8rem 3.8rem;
+    border-radius: 20px;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: all 0.2s;
+}.header-botton-side-left button:hover{
+    background-color: var(--teme-hover);
+    font-weight: bold;
+    transition: 0.4s;
+}
+.header-botton-side-right{
+    flex-basis: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header-botton-side-right img{
+    width: 100%;
+}
+@media (max-width: 800px){
+    .header-botton-side{
+        flex-direction: column;
+        text-align: center;
+        padding-top: 4rem;
+    }
+}
+.informations-2{
+    width: 100%;
+    height: 510px;
+    padding: 15px;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+.container-cards{
+    margin-top: 50px;
+    width: 100%;
+    padding: 15px;
+    background-color: var(--teme);
+    justify-content:space-around;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.card {
+    width: 300px;
+    height: 516px;
+    background-color: var(--body);
+    border-radius: 10px;
+    border-style: none;
+}
+
+.card img {
+    width: 100%;
+    height: 48%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card h1 {
+    color: var(--teme-title);
+    text-align: left;
+    font-weight: bolder;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.card p {
+    color: var(--text);
+    text-align: justify;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    max-height: 155px; /* Altura máxima para o elemento p */
+    overflow-y: auto; /* Adiciona scroll vertical quando o texto ultrapassa a altura máxima */
+}
+
+.card button {
+    background-color: var(--teme2);
+    width: 100%;
+    text-align: center;
+    padding: 7px;
+    border-radius: 0 0 10px 10px;
+    border: none;
+}
+.card button:hover{
+    background-color: var(--teme-hover);
+    color: var(--text2);
+    font-weight: bolder;
+}
+ /*cards*/
+ @media (max-width: 700px){
+    .card {
+        width: 300px;
+        background-color: var(--body);
+        border-radius: 10px;
+    }
+ }
