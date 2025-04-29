@@ -1,0 +1,1374 @@
+[
+    {
+        "PROCESSO":"PICKING",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Fast Start",
+        "META":"00:00:00",
+        "TURNO":"T2"
+    },
+    {
+        "PROCESSO":"PICKING",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"First BIP",
+        "META":"14:05:00",
+        "TURNO":"T2"
+    },
+    {
+        "PROCESSO":"PICKING",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Meal Accucary - Ultimo BIP",
+        "META":"00:10:00",
+        "TURNO":"T2"
+    },
+    {
+        "PROCESSO":"PICKING",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Meal Accucary - Tempo Catraca",
+        "META":"01:00:00",
+        "TURNO":"T2"
+    },
+    {
+        "PROCESSO":"PICKING",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Meal Accucary - Primeiro BIP",
+        "META":"00:10:00",
+        "TURNO":"T2"
+    },
+    {
+        "PROCESSO":"PICKING",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Produtividade Liquída",
+        "META":60,
+        "TURNO":"T2"
+    },
+    {
+        "PROCESSO":"PICKING",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Utilização",
+        "META":"75%",
+        "TURNO":"T2"
+    },
+    {
+        "PROCESSO":"PICKING",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Ociosidade",
+        "META":"25%",
+        "TURNO":"T2"
+    },
+    {
+        "PROCESSO":"PICKING",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Hand Held nao devolvidos",
+        "META":0,
+        "TURNO":"T2"
+    },
+    {
+        "PROCESSO":"PICKING",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Setup Time - Strong Finish",
+        "META":"00:00:00",
+        "TURNO":"T2"
+    },
+    {
+        "PROCESSO":"PICKING",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Last BIP",
+        "META":"22:12:00",
+        "TURNO":"T2"
+    },
+    {
+        "PROCESSO":"PACKING",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Fast Start",
+        "META":"00:00:00",
+        "TURNO":"T2"
+    },
+    {
+        "PROCESSO":"PACKING",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"First BIP",
+        "META":"14:05:00",
+        "TURNO":"T2"
+    },
+    {
+        "PROCESSO":"PACKING",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Meal Accucary - Ultimo BIP",
+        "META":"00:05:00",
+        "TURNO":"T2"
+    },
+    {
+        "PROCESSO":"PACKING",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Meal Accucary - Tempo Catraca",
+        "META":"01:00:00",
+        "TURNO":"T2"
+    },
+    {
+        "PROCESSO":"PACKING",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Meal Accucary - Primeiro BIP",
+        "META":"00:05:00",
+        "TURNO":"T2"
+    },
+    {
+        "PROCESSO":"PACKING",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Produtividade Liquída",
+        "META":140,
+        "TURNO":"T2"
+    },
+    {
+        "PROCESSO":"PACKING",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Utilização",
+        "META":"85%",
+        "TURNO":"T2"
+    },
+    {
+        "PROCESSO":"PACKING",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Ociosidade",
+        "META":"15%",
+        "TURNO":"T2"
+    },
+    {
+        "PROCESSO":"PACKING",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Hand Held nao devolvidos",
+        "META":0,
+        "TURNO":"T2"
+    },
+    {
+        "PROCESSO":"PACKING",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Aderencia ao Sugeridor",
+        "META":"75%",
+        "TURNO":"T2"
+    },
+    {
+        "PROCESSO":"PACKING",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Setup Time - Strong Finish",
+        "META":"00:00:00",
+        "TURNO":"T2"
+    },
+    {
+        "PROCESSO":"PACKING",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Last BIP",
+        "META":"22:12:00",
+        "TURNO":"T2"
+    },
+    {
+        "PROCESSO":"HU_ASSEMBLY",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Fast Start",
+        "META":"00:00:00",
+        "TURNO":"T2"
+    },
+    {
+        "PROCESSO":"HU_ASSEMBLY",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"First BIP",
+        "META":"14:05:00",
+        "TURNO":"T2"
+    },
+    {
+        "PROCESSO":"HU_ASSEMBLY",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Meal Accucary - Tempo Catraca",
+        "META":"01:00:00",
+        "TURNO":"T2"
+    },
+    {
+        "PROCESSO":"HU_ASSEMBLY",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Produtividade Liquída",
+        "META":140,
+        "TURNO":"T2"
+    },
+    {
+        "PROCESSO":"HU_ASSEMBLY",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Utilização",
+        "META":"85%",
+        "TURNO":"T2"
+    },
+    {
+        "PROCESSO":"HU_ASSEMBLY",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Ociosidade",
+        "META":"15%",
+        "TURNO":"T2"
+    },
+    {
+        "PROCESSO":"HU_ASSEMBLY",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Hand Held nao devolvidos",
+        "META":0,
+        "TURNO":"T2"
+    },
+    {
+        "PROCESSO":"HU_ASSEMBLY",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Setup Time - Strong Finish",
+        "META":"00:00:00",
+        "TURNO":"T2"
+    },
+    {
+        "PROCESSO":"HU_ASSEMBLY",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Last BIP",
+        "META":"22:12:00",
+        "TURNO":"T2"
+    },
+    {
+        "PROCESSO":"DOCA",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Fast Start",
+        "META":"00:00:00",
+        "TURNO":"T2"
+    },
+    {
+        "PROCESSO":"DOCA",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"First BIP",
+        "META":"14:05:00",
+        "TURNO":"T2"
+    },
+    {
+        "PROCESSO":"DOCA",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Meal Accucary - Tempo Catraca",
+        "META":"01:00:00",
+        "TURNO":"T2"
+    },
+    {
+        "PROCESSO":"DOCA",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Produtividade Liquída",
+        "META":140,
+        "TURNO":"T2"
+    },
+    {
+        "PROCESSO":"DOCA",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Utilização",
+        "META":"85%",
+        "TURNO":"T2"
+    },
+    {
+        "PROCESSO":"DOCA",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Ociosidade",
+        "META":"15%",
+        "TURNO":"T2"
+    },
+    {
+        "PROCESSO":"DOCA",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Hand Held nao devolvidos",
+        "META":0,
+        "TURNO":"T2"
+    },
+    {
+        "PROCESSO":"DOCA",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Setup Time - Strong Finish",
+        "META":"00:00:00",
+        "TURNO":"T2"
+    },
+    {
+        "PROCESSO":"DOCA",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Last BIP",
+        "META":"22:12:00",
+        "TURNO":"T2"
+    },
+    {
+        "PROCESSO":"DOCA",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"OOT",
+        "META":"98%",
+        "TURNO":"T2"
+    },
+    {
+        "PROCESSO":"DOCA",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"DOT",
+        "META":"99,5%",
+        "TURNO":"T2"
+    },
+    {
+        "PROCESSO":"PICKING",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Fast Start",
+        "META":"00:00:00",
+        "TURNO":"T3"
+    },
+    {
+        "PROCESSO":"PICKING",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"First BIP",
+        "META":"22:25:00",
+        "TURNO":"T3"
+    },
+    {
+        "PROCESSO":"PICKING",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Meal Accucary - Ultimo BIP",
+        "META":"00:10:00",
+        "TURNO":"T3"
+    },
+    {
+        "PROCESSO":"PICKING",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Meal Accucary - Tempo Catraca",
+        "META":"01:00:00",
+        "TURNO":"T3"
+    },
+    {
+        "PROCESSO":"PICKING",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Meal Accucary - Primeiro BIP",
+        "META":"00:10:00",
+        "TURNO":"T3"
+    },
+    {
+        "PROCESSO":"PICKING",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Produtividade Liquída",
+        "META":60,
+        "TURNO":"T3"
+    },
+    {
+        "PROCESSO":"PICKING",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Utilização",
+        "META":"75%",
+        "TURNO":"T3"
+    },
+    {
+        "PROCESSO":"PICKING",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Ociosidade",
+        "META":"25%",
+        "TURNO":"T3"
+    },
+    {
+        "PROCESSO":"PICKING",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Hand Held nao devolvidos",
+        "META":0,
+        "TURNO":"T3"
+    },
+    {
+        "PROCESSO":"PICKING",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Setup Time - Strong Finish",
+        "META":"00:00:00",
+        "TURNO":"T3"
+    },
+    {
+        "PROCESSO":"PICKING",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Last BIP",
+        "META":"05:35:00",
+        "TURNO":"T3"
+    },
+    {
+        "PROCESSO":"PACKING",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Fast Start",
+        "META":"00:00:00",
+        "TURNO":"T3"
+    },
+    {
+        "PROCESSO":"PACKING",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"First BIP",
+        "META":"22:25:00",
+        "TURNO":"T3"
+    },
+    {
+        "PROCESSO":"PACKING",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Meal Accucary - Ultimo BIP",
+        "META":"00:05:00",
+        "TURNO":"T3"
+    },
+    {
+        "PROCESSO":"PACKING",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Meal Accucary - Tempo Catraca",
+        "META":"01:00:00",
+        "TURNO":"T3"
+    },
+    {
+        "PROCESSO":"PACKING",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Meal Accucary - Primeiro BIP",
+        "META":"00:05:00",
+        "TURNO":"T3"
+    },
+    {
+        "PROCESSO":"PACKING",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Produtividade Liquída",
+        "META":140,
+        "TURNO":"T3"
+    },
+    {
+        "PROCESSO":"PACKING",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Utilização",
+        "META":"85%",
+        "TURNO":"T3"
+    },
+    {
+        "PROCESSO":"PACKING",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Ociosidade",
+        "META":"15%",
+        "TURNO":"T3"
+    },
+    {
+        "PROCESSO":"PACKING",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Hand Held nao devolvidos",
+        "META":0,
+        "TURNO":"T3"
+    },
+    {
+        "PROCESSO":"PACKING",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Aderencia ao Sugeridor",
+        "META":"75%",
+        "TURNO":"T3"
+    },
+    {
+        "PROCESSO":"PACKING",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Setup Time - Strong Finish",
+        "META":"00:00:00",
+        "TURNO":"T3"
+    },
+    {
+        "PROCESSO":"PACKING",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Last BIP",
+        "META":"05:35:00",
+        "TURNO":"T3"
+    },
+    {
+        "PROCESSO":"HU_ASSEMBLY",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Fast Start",
+        "META":"00:00:00",
+        "TURNO":"T3"
+    },
+    {
+        "PROCESSO":"HU_ASSEMBLY",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"First BIP",
+        "META":"22:25:00",
+        "TURNO":"T3"
+    },
+    {
+        "PROCESSO":"HU_ASSEMBLY",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Meal Accucary - Tempo Catraca",
+        "META":"01:00:00",
+        "TURNO":"T3"
+    },
+    {
+        "PROCESSO":"HU_ASSEMBLY",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Produtividade Liquída",
+        "META":140,
+        "TURNO":"T3"
+    },
+    {
+        "PROCESSO":"HU_ASSEMBLY",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Utilização",
+        "META":"85%",
+        "TURNO":"T3"
+    },
+    {
+        "PROCESSO":"HU_ASSEMBLY",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Ociosidade",
+        "META":"15%",
+        "TURNO":"T3"
+    },
+    {
+        "PROCESSO":"HU_ASSEMBLY",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Hand Held nao devolvidos",
+        "META":0,
+        "TURNO":"T3"
+    },
+    {
+        "PROCESSO":"HU_ASSEMBLY",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Setup Time - Strong Finish",
+        "META":"00:00:00",
+        "TURNO":"T3"
+    },
+    {
+        "PROCESSO":"HU_ASSEMBLY",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Last BIP",
+        "META":"05:35:00",
+        "TURNO":"T3"
+    },
+    {
+        "PROCESSO":"DOCA",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Fast Start",
+        "META":"00:00:00",
+        "TURNO":"T3"
+    },
+    {
+        "PROCESSO":"DOCA",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"First BIP",
+        "META":"22:25:00",
+        "TURNO":"T3"
+    },
+    {
+        "PROCESSO":"DOCA",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Meal Accucary - Tempo Catraca",
+        "META":"01:00:00",
+        "TURNO":"T3"
+    },
+    {
+        "PROCESSO":"DOCA",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Produtividade Liquída",
+        "META":140,
+        "TURNO":"T3"
+    },
+    {
+        "PROCESSO":"DOCA",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Utilização",
+        "META":"85%",
+        "TURNO":"T3"
+    },
+    {
+        "PROCESSO":"DOCA",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Ociosidade",
+        "META":"15%",
+        "TURNO":"T3"
+    },
+    {
+        "PROCESSO":"DOCA",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Hand Held nao devolvidos",
+        "META":0,
+        "TURNO":"T3"
+    },
+    {
+        "PROCESSO":"DOCA",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Setup Time - Strong Finish",
+        "META":"00:00:00",
+        "TURNO":"T3"
+    },
+    {
+        "PROCESSO":"DOCA",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Last BIP",
+        "META":"05:35:00",
+        "TURNO":"T3"
+    },
+    {
+        "PROCESSO":"DOCA",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"OOT",
+        "META":"98%",
+        "TURNO":"T3"
+    },
+    {
+        "PROCESSO":"DOCA",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"DOT",
+        "META":"99,5%",
+        "TURNO":"T3"
+    },
+    {
+        "PROCESSO":"PICKING",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Fast Start",
+        "META":"00:00:00",
+        "TURNO":"T1"
+    },
+    {
+        "PROCESSO":"PICKING",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"First BIP",
+        "META":"05:45:00",
+        "TURNO":"T1"
+    },
+    {
+        "PROCESSO":"PICKING",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Meal Accucary - Ultimo BIP",
+        "META":"00:10:00",
+        "TURNO":"T1"
+    },
+    {
+        "PROCESSO":"PICKING",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Meal Accucary - Tempo Catraca",
+        "META":"01:00:00",
+        "TURNO":"T1"
+    },
+    {
+        "PROCESSO":"PICKING",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Meal Accucary - Primeiro BIP",
+        "META":"00:10:00",
+        "TURNO":"T1"
+    },
+    {
+        "PROCESSO":"PICKING",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Produtividade Liquída",
+        "META":70,
+        "TURNO":"T1"
+    },
+    {
+        "PROCESSO":"PICKING",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Utilização",
+        "META":"75%",
+        "TURNO":"T1"
+    },
+    {
+        "PROCESSO":"PICKING",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Ociosidade",
+        "META":"25%",
+        "TURNO":"T1"
+    },
+    {
+        "PROCESSO":"PICKING",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Hand Held nao devolvidos",
+        "META":0,
+        "TURNO":"T1"
+    },
+    {
+        "PROCESSO":"PICKING",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Setup Time - Strong Finish",
+        "META":"00:00:00",
+        "TURNO":"T1"
+    },
+    {
+        "PROCESSO":"PICKING",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Last BIP",
+        "META":"13:55:00",
+        "TURNO":"T1"
+    },
+    {
+        "PROCESSO":"PACKING",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Fast Start",
+        "META":"00:00:00",
+        "TURNO":"T1"
+    },
+    {
+        "PROCESSO":"PACKING",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"First BIP",
+        "META":"05:45:00",
+        "TURNO":"T1"
+    },
+    {
+        "PROCESSO":"PACKING",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Meal Accucary - Ultimo BIP",
+        "META":"00:05:00",
+        "TURNO":"T1"
+    },
+    {
+        "PROCESSO":"PACKING",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Meal Accucary - Tempo Catraca",
+        "META":"01:00:00",
+        "TURNO":"T1"
+    },
+    {
+        "PROCESSO":"PACKING",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Meal Accucary - Primeiro BIP",
+        "META":"00:05:00",
+        "TURNO":"T1"
+    },
+    {
+        "PROCESSO":"PACKING",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Produtividade Liquída",
+        "META":140,
+        "TURNO":"T1"
+    },
+    {
+        "PROCESSO":"PACKING",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Utilização",
+        "META":"85%",
+        "TURNO":"T1"
+    },
+    {
+        "PROCESSO":"PACKING",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Ociosidade",
+        "META":"15%",
+        "TURNO":"T1"
+    },
+    {
+        "PROCESSO":"PACKING",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Hand Held nao devolvidos",
+        "META":0,
+        "TURNO":"T1"
+    },
+    {
+        "PROCESSO":"PACKING",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Aderencia ao Sugeridor",
+        "META":"75%",
+        "TURNO":"T1"
+    },
+    {
+        "PROCESSO":"PACKING",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Setup Time - Strong Finish",
+        "META":"00:00:00",
+        "TURNO":"T1"
+    },
+    {
+        "PROCESSO":"PACKING",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Last BIP",
+        "META":"13:55:00",
+        "TURNO":"T1"
+    },
+    {
+        "PROCESSO":"HU_ASSEMBLY",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Fast Start",
+        "META":"00:00:00",
+        "TURNO":"T1"
+    },
+    {
+        "PROCESSO":"HU_ASSEMBLY",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"First BIP",
+        "META":"05:45:00",
+        "TURNO":"T1"
+    },
+    {
+        "PROCESSO":"HU_ASSEMBLY",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Meal Accucary - Tempo Catraca",
+        "META":"01:00:00",
+        "TURNO":"T1"
+    },
+    {
+        "PROCESSO":"HU_ASSEMBLY",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Produtividade Liquída",
+        "META":140,
+        "TURNO":"T1"
+    },
+    {
+        "PROCESSO":"HU_ASSEMBLY",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Utilização",
+        "META":"85%",
+        "TURNO":"T1"
+    },
+    {
+        "PROCESSO":"HU_ASSEMBLY",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Ociosidade",
+        "META":"15%",
+        "TURNO":"T1"
+    },
+    {
+        "PROCESSO":"HU_ASSEMBLY",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Hand Held nao devolvidos",
+        "META":0,
+        "TURNO":"T1"
+    },
+    {
+        "PROCESSO":"HU_ASSEMBLY",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Setup Time - Strong Finish",
+        "META":"00:00:00",
+        "TURNO":"T1"
+    },
+    {
+        "PROCESSO":"HU_ASSEMBLY",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Last BIP",
+        "META":"13:55:00",
+        "TURNO":"T1"
+    },
+    {
+        "PROCESSO":"DOCA",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Fast Start",
+        "META":"00:00:00",
+        "TURNO":"T1"
+    },
+    {
+        "PROCESSO":"DOCA",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"First BIP",
+        "META":"05:45:00",
+        "TURNO":"T1"
+    },
+    {
+        "PROCESSO":"DOCA",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Meal Accucary - Tempo Catraca",
+        "META":"01:00:00",
+        "TURNO":"T1"
+    },
+    {
+        "PROCESSO":"DOCA",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Produtividade Liquída",
+        "META":140,
+        "TURNO":"T1"
+    },
+    {
+        "PROCESSO":"DOCA",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Utilização",
+        "META":"85%",
+        "TURNO":"T1"
+    },
+    {
+        "PROCESSO":"DOCA",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Ociosidade",
+        "META":"15%",
+        "TURNO":"T1"
+    },
+    {
+        "PROCESSO":"DOCA",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Hand Held nao devolvidos",
+        "META":0,
+        "TURNO":"T1"
+    },
+    {
+        "PROCESSO":"DOCA",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Setup Time - Strong Finish",
+        "META":"00:00:00",
+        "TURNO":"T1"
+    },
+    {
+        "PROCESSO":"DOCA",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Last BIP",
+        "META":"13:55:00",
+        "TURNO":"T1"
+    },
+    {
+        "PROCESSO":"DOCA",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"OOT",
+        "META":"99%",
+        "TURNO":"T1"
+    },
+    {
+        "PROCESSO":"DOCA",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"DOT",
+        "META":"99,5%",
+        "TURNO":"T1"
+    },
+    {
+        "PROCESSO":"PUTAWAY",
+        "AREA_HEAD":"Inbound",
+        "TARGET":"Fast Start",
+        "META":"00:00:00",
+        "TURNO":"T2"
+    },
+    {
+        "PROCESSO":"PUTAWAY",
+        "AREA_HEAD":"Inbound",
+        "TARGET":"First BIP",
+        "META":"14:05:00",
+        "TURNO":"T2"
+    },
+    {
+        "PROCESSO":"PUTAWAY",
+        "AREA_HEAD":"Inbound",
+        "TARGET":"Meal Accucary - Ultimo BIP",
+        "META":"00:10:00",
+        "TURNO":"T2"
+    },
+    {
+        "PROCESSO":"PUTAWAY",
+        "AREA_HEAD":"Inbound",
+        "TARGET":"Meal Accucary - Tempo Catraca",
+        "META":"01:00:00",
+        "TURNO":"T2"
+    },
+    {
+        "PROCESSO":"PUTAWAY",
+        "AREA_HEAD":"Inbound",
+        "TARGET":"Meal Accucary - Primeiro BIP",
+        "META":"00:10:00",
+        "TURNO":"T2"
+    },
+    {
+        "PROCESSO":"PUTAWAY",
+        "AREA_HEAD":"Inbound",
+        "TARGET":"Produtividade Liquída",
+        "META":120,
+        "TURNO":"T2"
+    },
+    {
+        "PROCESSO":"PUTAWAY",
+        "AREA_HEAD":"Inbound",
+        "TARGET":"Utilização",
+        "META":85,
+        "TURNO":"T2"
+    },
+    {
+        "PROCESSO":"PUTAWAY",
+        "AREA_HEAD":"Inbound",
+        "TARGET":"Ociosidade",
+        "META":15,
+        "TURNO":"T2"
+    },
+    {
+        "PROCESSO":"PUTAWAY",
+        "AREA_HEAD":"Inbound",
+        "TARGET":"Hand Held nao devolvidos",
+        "META":0,
+        "TURNO":"T2"
+    },
+    {
+        "PROCESSO":"PUTAWAY",
+        "AREA_HEAD":"Inbound",
+        "TARGET":"Setup Time - Strong Finish",
+        "META":"00:00:00",
+        "TURNO":"T2"
+    },
+    {
+        "PROCESSO":"PUTAWAY",
+        "AREA_HEAD":"Inbound",
+        "TARGET":"Last BIP",
+        "META":"21:50:00",
+        "TURNO":"T2"
+    },
+    {
+        "PROCESSO":"CHECKIN",
+        "AREA_HEAD":"Inbound",
+        "TARGET":"Fast Start",
+        "META":"00:00:00",
+        "TURNO":"T2"
+    },
+    {
+        "PROCESSO":"CHECKIN",
+        "AREA_HEAD":"Inbound",
+        "TARGET":"First BIP",
+        "META":"14:05:00",
+        "TURNO":"T2"
+    },
+    {
+        "PROCESSO":"CHECKIN",
+        "AREA_HEAD":"Inbound",
+        "TARGET":"Meal Accucary - Ultimo BIP",
+        "META":"00:05:00",
+        "TURNO":"T2"
+    },
+    {
+        "PROCESSO":"CHECKIN",
+        "AREA_HEAD":"Inbound",
+        "TARGET":"Meal Accucary - Tempo Catraca",
+        "META":"01:00:00",
+        "TURNO":"T2"
+    },
+    {
+        "PROCESSO":"CHECKIN",
+        "AREA_HEAD":"Inbound",
+        "TARGET":"Meal Accucary - Primeiro BIP",
+        "META":"00:05:00",
+        "TURNO":"T2"
+    },
+    {
+        "PROCESSO":"CHECKIN",
+        "AREA_HEAD":"Inbound",
+        "TARGET":"Produtividade Liquída",
+        "META":150,
+        "TURNO":"T2"
+    },
+    {
+        "PROCESSO":"CHECKIN",
+        "AREA_HEAD":"Inbound",
+        "TARGET":"Utilização",
+        "META":50,
+        "TURNO":"T2"
+    },
+    {
+        "PROCESSO":"CHECKIN",
+        "AREA_HEAD":"Inbound",
+        "TARGET":"Ociosidade",
+        "META":50,
+        "TURNO":"T2"
+    },
+    {
+        "PROCESSO":"CHECKIN",
+        "AREA_HEAD":"Inbound",
+        "TARGET":"Hand Held nao devolvidos",
+        "META":0,
+        "TURNO":"T2"
+    },
+    {
+        "PROCESSO":"CHECKIN",
+        "AREA_HEAD":"Inbound",
+        "TARGET":"Setup Time - Strong Finish",
+        "META":"00:00:00",
+        "TURNO":"T2"
+    },
+    {
+        "PROCESSO":"CHECKIN",
+        "AREA_HEAD":"Inbound",
+        "TARGET":"Last BIP",
+        "META":"21:50:00",
+        "TURNO":"T2"
+    },
+    {
+        "PROCESSO":"PUTAWAY",
+        "AREA_HEAD":"Inbound",
+        "TARGET":"Fast Start",
+        "META":"00:00:00",
+        "TURNO":"T3"
+    },
+    {
+        "PROCESSO":"PUTAWAY",
+        "AREA_HEAD":"Inbound",
+        "TARGET":"First BIP",
+        "META":"22:20:00",
+        "TURNO":"T3"
+    },
+    {
+        "PROCESSO":"PUTAWAY",
+        "AREA_HEAD":"Inbound",
+        "TARGET":"Meal Accucary - Ultimo BIP",
+        "META":"05:00:00",
+        "TURNO":"T3"
+    },
+    {
+        "PROCESSO":"PUTAWAY",
+        "AREA_HEAD":"Inbound",
+        "TARGET":"Meal Accucary - Tempo Catraca",
+        "META":"01:00:00",
+        "TURNO":"T3"
+    },
+    {
+        "PROCESSO":"PUTAWAY",
+        "AREA_HEAD":"Inbound",
+        "TARGET":"Meal Accucary - Primeiro BIP",
+        "META":"00:05:00",
+        "TURNO":"T3"
+    },
+    {
+        "PROCESSO":"PUTAWAY",
+        "AREA_HEAD":"Inbound",
+        "TARGET":"Produtividade Liquída",
+        "META":120,
+        "TURNO":"T3"
+    },
+    {
+        "PROCESSO":"PUTAWAY",
+        "AREA_HEAD":"Inbound",
+        "TARGET":"Utilização",
+        "META":"85%",
+        "TURNO":"T3"
+    },
+    {
+        "PROCESSO":"PUTAWAY",
+        "AREA_HEAD":"Inbound",
+        "TARGET":"Ociosidade",
+        "META":"25%",
+        "TURNO":"T3"
+    },
+    {
+        "PROCESSO":"PUTAWAY",
+        "AREA_HEAD":"Inbound",
+        "TARGET":"Hand Held nao devolvidos",
+        "META":0,
+        "TURNO":"T3"
+    },
+    {
+        "PROCESSO":"PUTAWAY",
+        "AREA_HEAD":"Inbound",
+        "TARGET":"Setup Time - Strong Finish",
+        "META":"00:00:00",
+        "TURNO":"T3"
+    },
+    {
+        "PROCESSO":"PUTAWAY",
+        "AREA_HEAD":"Inbound",
+        "TARGET":"Last BIP",
+        "META":"05:30:00",
+        "TURNO":"T3"
+    },
+    {
+        "PROCESSO":"CHECKIN",
+        "AREA_HEAD":"Inbound",
+        "TARGET":"Fast Start",
+        "META":"00:00:00",
+        "TURNO":"T3"
+    },
+    {
+        "PROCESSO":"CHECKIN",
+        "AREA_HEAD":"Inbound",
+        "TARGET":"First BIP",
+        "META":"22:20:00",
+        "TURNO":"T3"
+    },
+    {
+        "PROCESSO":"CHECKIN",
+        "AREA_HEAD":"Inbound",
+        "TARGET":"Meal Accucary - Ultimo BIP",
+        "META":"00:05:00",
+        "TURNO":"T3"
+    },
+    {
+        "PROCESSO":"CHECKIN",
+        "AREA_HEAD":"Inbound",
+        "TARGET":"Meal Accucary - Tempo Catraca",
+        "META":"01:00:00",
+        "TURNO":"T3"
+    },
+    {
+        "PROCESSO":"CHECKIN",
+        "AREA_HEAD":"Inbound",
+        "TARGET":"Meal Accucary - Primeiro BIP",
+        "META":"00:05:00",
+        "TURNO":"T3"
+    },
+    {
+        "PROCESSO":"CHECKIN",
+        "AREA_HEAD":"Inbound",
+        "TARGET":"Produtividade Liquída",
+        "META":150,
+        "TURNO":"T3"
+    },
+    {
+        "PROCESSO":"CHECKIN",
+        "AREA_HEAD":"Inbound",
+        "TARGET":"Utilização",
+        "META":"85%",
+        "TURNO":"T3"
+    },
+    {
+        "PROCESSO":"CHECKIN",
+        "AREA_HEAD":"Inbound",
+        "TARGET":"Ociosidade",
+        "META":"25%",
+        "TURNO":"T3"
+    },
+    {
+        "PROCESSO":"CHECKIN",
+        "AREA_HEAD":"Inbound",
+        "TARGET":"Hand Held nao devolvidos",
+        "META":0,
+        "TURNO":"T3"
+    },
+    {
+        "PROCESSO":"CHECKIN",
+        "AREA_HEAD":"Inbound",
+        "TARGET":"Setup Time - Strong Finish",
+        "META":0,
+        "TURNO":"T3"
+    },
+    {
+        "PROCESSO":"CHECKIN",
+        "AREA_HEAD":"Inbound",
+        "TARGET":"Last BIP",
+        "META":"00:00:00",
+        "TURNO":"T3"
+    },
+    {
+        "PROCESSO":"PACKING",
+        "AREA_HEAD":"Outbound",
+        "TARGET":"Last BIP",
+        "META":"05:30:00",
+        "TURNO":"T3"
+    },
+    {
+        "PROCESSO":"PUTAWAY",
+        "AREA_HEAD":"Inbound",
+        "TARGET":"Fast Start",
+        "META":"00:00:00",
+        "TURNO":"T1"
+    },
+    {
+        "PROCESSO":"PUTAWAY",
+        "AREA_HEAD":"Inbound",
+        "TARGET":"First BIP",
+        "META":"05:45:00",
+        "TURNO":"T1"
+    },
+    {
+        "PROCESSO":"PUTAWAY",
+        "AREA_HEAD":"Inbound",
+        "TARGET":"Meal Accucary - Ultimo BIP",
+        "META":"00:10:00",
+        "TURNO":"T1"
+    },
+    {
+        "PROCESSO":"PUTAWAY",
+        "AREA_HEAD":"Inbound",
+        "TARGET":"Meal Accucary - Tempo Catraca",
+        "META":"01:00:00",
+        "TURNO":"T1"
+    },
+    {
+        "PROCESSO":"PUTAWAY",
+        "AREA_HEAD":"Inbound",
+        "TARGET":"Meal Accucary - Primeiro BIP",
+        "META":"00:10:00",
+        "TURNO":"T1"
+    },
+    {
+        "PROCESSO":"PUTAWAY",
+        "AREA_HEAD":"Inbound",
+        "TARGET":"Produtividade Liquída",
+        "META":120,
+        "TURNO":"T1"
+    },
+    {
+        "PROCESSO":"PUTAWAY",
+        "AREA_HEAD":"Inbound",
+        "TARGET":"Utilização",
+        "META":75,
+        "TURNO":"T1"
+    },
+    {
+        "PROCESSO":"PUTAWAY",
+        "AREA_HEAD":"Inbound",
+        "TARGET":"Ociosidade",
+        "META":25,
+        "TURNO":"T1"
+    },
+    {
+        "PROCESSO":"PUTAWAY",
+        "AREA_HEAD":"Inbound",
+        "TARGET":"Hand Held nao devolvidos",
+        "META":0,
+        "TURNO":"T1"
+    },
+    {
+        "PROCESSO":"PUTAWAY",
+        "AREA_HEAD":"Inbound",
+        "TARGET":"Setup Time - Strong Finish",
+        "META":"00:00:00",
+        "TURNO":"T1"
+    },
+    {
+        "PROCESSO":"PUTAWAY",
+        "AREA_HEAD":"Inbound",
+        "TARGET":"Last BIP",
+        "META":"13:55:00",
+        "TURNO":"T1"
+    },
+    {
+        "PROCESSO":"CHECKIN",
+        "AREA_HEAD":"Inbound",
+        "TARGET":"Fast Start",
+        "META":"00:00:00",
+        "TURNO":"T1"
+    },
+    {
+        "PROCESSO":"CHECKIN",
+        "AREA_HEAD":"Inbound",
+        "TARGET":"First BIP",
+        "META":"05:45:00",
+        "TURNO":"T1"
+    },
+    {
+        "PROCESSO":"CHECKIN",
+        "AREA_HEAD":"Inbound",
+        "TARGET":"Meal Accucary - Ultimo BIP",
+        "META":"00:05:00",
+        "TURNO":"T1"
+    },
+    {
+        "PROCESSO":"CHECKIN",
+        "AREA_HEAD":"Inbound",
+        "TARGET":"Meal Accucary - Tempo Catraca",
+        "META":"01:00:00",
+        "TURNO":"T1"
+    },
+    {
+        "PROCESSO":"CHECKIN",
+        "AREA_HEAD":"Inbound",
+        "TARGET":"Meal Accucary - Primeiro BIP",
+        "META":"00:05:00",
+        "TURNO":"T1"
+    },
+    {
+        "PROCESSO":"CHECKIN",
+        "AREA_HEAD":"Inbound",
+        "TARGET":"Produtividade Liquída",
+        "META":150,
+        "TURNO":"T1"
+    },
+    {
+        "PROCESSO":"CHECKIN",
+        "AREA_HEAD":"Inbound",
+        "TARGET":"Utilização",
+        "META":50,
+        "TURNO":"T1"
+    },
+    {
+        "PROCESSO":"CHECKIN",
+        "AREA_HEAD":"Inbound",
+        "TARGET":"Ociosidade",
+        "META":50,
+        "TURNO":"T1"
+    },
+    {
+        "PROCESSO":"CHECKIN",
+        "AREA_HEAD":"Inbound",
+        "TARGET":"Hand Held nao devolvidos",
+        "META":0,
+        "TURNO":"T1"
+    },
+    {
+        "PROCESSO":"CHECKIN",
+        "AREA_HEAD":"Inbound",
+        "TARGET":"Setup Time - Strong Finish",
+        "META":"00:00:00",
+        "TURNO":"T1"
+    },
+    {
+        "PROCESSO":"CHECKIN",
+        "AREA_HEAD":"Inbound",
+        "TARGET":"Last BIP",
+        "META":"13:55:00",
+        "TURNO":"T1"
+    }
+]

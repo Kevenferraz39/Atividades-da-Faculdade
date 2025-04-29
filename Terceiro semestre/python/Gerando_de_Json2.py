@@ -31,43 +31,26 @@ scopes = [
 
 # json no projeto credentials_path = "c:/Users/kferraz/Documents/GitHub/Atividades-da-Faculdade/codigopy.json"
 
-#json na maquina
 credentials_path = "C:/Users/kferraz/Documents/programacao/chave010908780.json"
 credentials = ServiceAccountCredentials.from_json_keyfile_name(credentials_path, scopes)
-
-# Autenticando
 gc = gspread.authorize(credentials)
 
 # URL ou ID da planilha
 
-'''
-sheet_url = "https://docs.google.com/spreadsheets/d/18gDwt_l3Osz3EKxNbJWOmJQYcre6L8Za5JH6VR3KrWg/edit?gid=0#gid=0"
-'''
-
-sheet_url = "https://docs.google.com/spreadsheets/d/1tXi9nfe-OMFI5dc711H74vIYCRy03j5bKpV5ejTcyzE/edit?gid=0#gid=0"
-
-
-# Abrindo a planilha
+sheet_url = "https://docs.google.com/spreadsheets/d/1-jXiT_cQgeyypdmRQQooTy2EHU0KG_LRIIExAPWFSU0/edit?gid=0#gid=0"
 spreadsheet = gc.open_by_url(sheet_url)
-
-# Selecionando a aba (worksheet)
-
-worksheet = spreadsheet.worksheet("Página1")  # certifique-se que esse é o nome correto
-
-# Lendo os dados da planilha
+worksheet = spreadsheet.worksheet("META") 
 data = worksheet.get_all_records()
 
 # Convertendo para DataFrame
 df = pd.DataFrame(data)
 
-# Exibindo os dados como tabela
 print("Visualização da tabela:")
 print(df.head())
 
 # Caminho para salvar o arquivo JSON
-output_dir = "c:/Users/kferraz/Documents/GitHub/Atividades-da-Faculdade/Banco_de_dados_json"
-
-output_path = os.path.join(output_dir, "baseABS.json")
+output_dir = "c:/Users/kferraz/Documents/GitHub/Atividades-da-Faculdade/Terceiro semestre/Banco_de_dados_json"
+output_path = os.path.join(output_dir, "MetasTargets.json")
 
 # Exportando para JSON
 df.to_json(output_path, orient="records", force_ascii=False, indent=4)
