@@ -1,0 +1,20 @@
+[
+    {
+        "email": "kevenferraz39@gmail.com",
+        "usuario": "kevenferraz",
+        "senha": "0408",
+        "telefone": "11945982950",
+        "idade": "21",
+        "genero": "masculino",
+        "foto_de_perfil": "C/Users/kferraz/Pictures/Imagens minhas/foto de perfil"
+    },
+    {
+        "email": "usuario@gmail.com",
+        "usuario": "user",
+        "senha": "1508.",
+        "telefone": "1190867833",
+        "idade": "19",
+        "genero": "feminino",
+        "foto_de_perfil": ""
+    }
+]
