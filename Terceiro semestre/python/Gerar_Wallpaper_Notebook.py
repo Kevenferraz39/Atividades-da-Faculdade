@@ -2,7 +2,7 @@
 from PIL import Image, ImageOps
 
 # Caminho da imagem original (substitua pelo seu caminho local ou ajuste conforme necessário)
-original_image_path = '/mnt/data/Captura de tela 2025-04-27 142119.png'
+original_image_path = 'C:/Users/kferraz/Pictures/foto2.jpg'
 
 # Abrir a imagem
 image = Image.open(original_image_path)
@@ -26,7 +26,7 @@ fitted_image = ImageOps.fit(
 )
 
 # Caminho de saída da imagem final
-output_path = '/mnt/data/wallpaper_notebook_1920x1200.jpg'
+output_path = 'C:/Users/kferraz/Pictures/foto3.jpg'
 
 # Salvar a imagem ajustada em alta qualidade
 fitted_image.save(output_path, format='JPEG', quality=95)
