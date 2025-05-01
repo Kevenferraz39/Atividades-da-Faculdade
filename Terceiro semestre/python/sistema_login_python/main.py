@@ -7,7 +7,7 @@ from usuario_service import (
     listar_todos_usuarios,
     excluir_usuario
 )
-
+ 
 def menu():
     print("1 - Cadastrar | 2 - Login | 3 - Recuperar Senha/Usuário")
     return input("Escolha a opção: ")
