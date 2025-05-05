@@ -4,166 +4,166 @@
     <base target="_top">
     <title>Controle ABS</title>
    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        google.script.run.withSuccessHandler(function (teamleaders) {
-          const select = document.getElementById("nome");
-          if (select) {
-            teamleaders.forEach(function (tl) {
-              const option = document.createElement("option");
-              option.value = tl.nome;
-              option.text = tl.nome;
-              select.appendChild(option);
-            });
-          }
-        }).obterTeamLeaders();
+  document.addEventListener("DOMContentLoaded", function () {
+    google.script.run.withSuccessHandler(function (teamleaders) {
+      const select = document.getElementById("nome");
+      if (select) {
+        teamleaders.forEach(function (tl) {
+          const option = document.createElement("option");
+          option.value = tl.nome;
+          option.text = tl.nome;
+          select.appendChild(option);
+        });
+      }
+    }).obterTeamLeaders();
+
+    // Criar container do botão de ajuda logo ao carregar
+    const container = document.createElement("div");
+    container.id = "botoes-container";
+    container.className = "botoes-container";
+
+    const botaoAjuda = document.createElement("div");
+    botaoAjuda.id = "ajuda-botao";
+    botaoAjuda.textContent = "?";
+    botaoAjuda.title = "Clique aqui para entender as siglas do Status_ABS";
+    botaoAjuda.onclick = () => document.getElementById("ajuda-modal").style.display = "flex";
+
+    container.appendChild(botaoAjuda);
+    document.getElementById("resultado").after(container);
+  });
+
+  function enviarNome() {
+    const nomeSelecionado = document.getElementById("nome").value;
+    if (!nomeSelecionado) {
+      alert("Por favor, selecione um Team Leader.");
+      return;
+    }
+
+    google.script.run.withSuccessHandler(function (dados) {
+      if (!dados || dados.length === 0) {
+        alert("Nenhum dado encontrado para este Team Leader.");
+        return;
+      }
+
+      let html = "<table>";
+      html += `
+        <thead>
+          <tr>
+            <th>AREA_HEAD</th><th>IDGROOT</th><th>LDAP</th><th>COLABORADOR</th><th>TURNO</th><th>ESCALA</th>
+            <th>TURMA_ESCALA</th><th>EMPRESA</th><th>PROCESSO</th><th>STATUS_HC</th><th>STATUS</th>
+          </tr>
+        </thead><tbody>`;
+
+      dados.forEach(linha => {
+        html += `
+          <tr>
+            <td>${linha.AREA_HEAD}</td><td>${linha.IDGROOT}</td><td>${linha.LDAP}</td><td>${linha.COLABORADOR}</td>
+            <td>${linha.TURNO}</td><td>${linha.ESCALA}</td><td>${linha.TURMA_ESCALA}</td><td>${linha.EMPRESA}</td>
+            <td>${linha.PROCESSO}</td><td>${linha.STATUS_HC}</td>
+            <td>
+              <select class="status-select">
+                <option value="">Selecione</option>
+                <option value="Presente">Presente</option>
+                <option value="Presenca-HE">Presença (HE)</option>
+                <option value="Falta">Falta</option>
+                <option value="Atestado">Atestado</option>
+                <option value="Ferias">Férias</option>
+                <option value="Folga-Escala">Folga Escala</option>
+                <option value="Afastamento">Afastamento</option>
+                <option value="Atestado-Horas">Atestado Horas</option>
+                <option value="Banco-de-Horas">Banco de Horas</option>
+                <option value="Fretado">Fretado</option>
+                <option value="Licenca">Licença</option>
+                <option value="Afastamento-Acd-Trab">Afastamento Acd Trabalho</option>
+                <option value="Atestado-Acd-Trab">Atestado Acd Trabalho</option>
+                <option value="Decl-Medica">Declaração Médica</option>
+                <option value="Sinergia-CX">Sinergia CX</option>
+                <option value="Sinergia-IN">Sinergia IN</option>
+                <option value="Sinergia-INV">Sinergia INV</option>
+                <option value="Sinergia-Loss">Sinergia Loss</option>
+                <option value="Sinergia-MWH">Sinergia MWH</option>
+                <option value="Sinergia-OUT">Sinergia OUT</option>
+                <option value="Sinergia-Qua">Sinergia Qua</option>
+                <option value="Sinergia-RC01">Sinergia RC01</option>
+                <option value="Sinergia-RC-SP10">Sinergia RC-SP10</option>
+                <option value="Sinergia-RET">Sinergia RET</option>
+                <option value="Sinergia-SP01">Sinergia SP01</option>
+                <option value="Sinergia-SP02">Sinergia SP02</option>
+                <option value="Sinergia-SP03">Sinergia SP03</option>
+                <option value="Sinergia-SP04">Sinergia SP04</option>
+                <option value="Sinergia-SP05">Sinergia SP05</option>
+                <option value="Sinergia-SP06">Sinergia SP06</option>
+                <option value="Sinergia-Sortation">Sinergia Sortation</option>
+                <option value="Sinergia-Suspensao">Sinergia Suspensão</option>
+                <option value="Sinergia-SVC">Sinergia SVC</option>
+                <option value="Transferido">Transferido</option>
+                <option value="Treinamento-Ext">Treinamento Ext</option>
+                <option value="Treinamento-Int">Treinamento Int</option>
+                <option value="Treinamento-REP-III">Treinamento REP III</option>
+                <option value="Sinergia-Insumo">Sinergia Insumo</option>
+              </select>
+            </td>
+          </tr>`;
       });
 
-      function enviarNome() {
-        const nomeSelecionado = document.getElementById("nome").value;
-        if (!nomeSelecionado) {
-          alert("Por favor, selecione um Team Leader.");
-          return;
-        }
+      html += "</tbody></table>";
+      document.querySelector(".tabela-scroll").innerHTML = html;
 
-        google.script.run.withSuccessHandler(function (dados) {
-          if (!dados || dados.length === 0) {
-            alert("Nenhum dado encontrado para este Team Leader.");
-            return;
-          }
+      // Adiciona botão "Registrar Todos" apenas se ainda não existir
+      if (!document.getElementById("botao-registrar")) {
+        const botaoRegistrar = document.createElement("button");
+        botaoRegistrar.textContent = "Registrar Todos";
+        botaoRegistrar.className = "botao-fixo";
+        botaoRegistrar.id = "botao-registrar";
+        botaoRegistrar.onclick = registrarTodos;
 
-          let html = "<table>";
-          html += `
-            <thead>
-              <tr>
-                <th>AREA_HEAD</th><th>IDGROOT</th><th>LDAP</th><th>COLABORADOR</th><th>TURNO</th><th>ESCALA</th>
-                <th>TURMA_ESCALA</th><th>EMPRESA</th><th>PROCESSO</th><th>STATUS_HC</th><th>STATUS</th>
-              </tr>
-            </thead><tbody>`;
-
-          dados.forEach(linha => {
-            html += `
-              <tr>
-                <td>${linha.AREA_HEAD}</td><td>${linha.IDGROOT}</td><td>${linha.LDAP}</td><td>${linha.COLABORADOR}</td>
-                <td>${linha.TURNO}</td><td>${linha.ESCALA}</td><td>${linha.TURMA_ESCALA}</td><td>${linha.EMPRESA}</td>
-                <td>${linha.PROCESSO}</td><td>${linha.STATUS_HC}</td>
-                <td>
-                  <select class="status-select">
-                    <option value="">Selecione</option>
-                    <option value="Presente">Presente</option>
-                    <option value="Presenca-HE">Presença (HE)</option>
-                    <option value="Falta">Falta</option>
-                    <option value="Atestado">Atestado</option>
-                    <option value="Ferias">Férias</option>
-                    <option value="Folga-Escala">Folga Escala</option>
-                    <option value="Afastamento">Afastamento</option>
-                    <option value="Atestado-Horas">Atestado Horas</option>
-                    <option value="Banco-de-Horas">Banco de Horas</option>
-                    <option value="Fretado">Fretado</option>
-                    <option value="Licenca">Licença</option>
-                    <option value="Afastamento-Acd-Trab">Afastamento Acd Trabalho</option>
-                    <option value="Atestado-Acd-Trab">Atestado Acd Trabalho</option>
-                    <option value="Decl-Medica">Declaração Médica</option>
-                    <option value="Sinergia-CX">Sinergia CX</option>
-                    <option value="Sinergia-IN">Sinergia IN</option>
-                    <option value="Sinergia-INV">Sinergia INV</option>
-                    <option value="Sinergia-Loss">Sinergia Loss</option>
-                    <option value="Sinergia-MWH">Sinergia MWH</option>
-                    <option value="Sinergia-OUT">Sinergia OUT</option>
-                    <option value="Sinergia-Qua">Sinergia Qua</option>
-                    <option value="Sinergia-RC01">Sinergia RC01</option>
-                    <option value="Sinergia-RC-SP10">Sinergia RC-SP10</option>
-                    <option value="Sinergia-RET">Sinergia RET</option>
-                    <option value="Sinergia-SP01">Sinergia SP01</option>
-                    <option value="Sinergia-SP02">Sinergia SP02</option>
-                    <option value="Sinergia-SP03">Sinergia SP03</option>
-                    <option value="Sinergia-SP04">Sinergia SP04</option>
-                    <option value="Sinergia-SP05">Sinergia SP05</option>
-                    <option value="Sinergia-SP06">Sinergia SP06</option>
-                    <option value="Sinergia-Sortation">Sinergia Sortation</option>
-                    <option value="Sinergia-Suspensao">Sinergia Suspensão</option>
-                    <option value="Sinergia-SVC">Sinergia SVC</option>
-                    <option value="Transferido">Transferido</option>
-                    <option value="Treinamento-Ext">Treinamento Ext</option>
-                    <option value="Treinamento-Int">Treinamento Int</option>
-                    <option value="Treinamento-REP-III">Treinamento REP III</option>
-                    <option value="Sinergia-Insumo">Sinergia Insumo</option>
-                  </select>
-                </td>
-              </tr>`;
-          });
-
-          html += "</tbody></table>";
-          document.querySelector(".tabela-scroll").innerHTML = html;
-
-          const containerAntigo = document.getElementById("botoes-container");
-          if (containerAntigo) containerAntigo.remove();
-
-          const container = document.createElement("div");
-          container.id = "botoes-container";
-          container.className = "botoes-container";
-
-          const botaoAjuda = document.createElement("div");
-          botaoAjuda.id = "ajuda-botao";
-          botaoAjuda.textContent = "?";
-          botaoAjuda.title = "Clique aqui para entender as siglas do Status_ABS";
-          botaoAjuda.onclick = () => document.getElementById("ajuda-modal").style.display = "flex";
-
-          const botaoRegistrar = document.createElement("button");
-          botaoRegistrar.textContent = "Registrar Todos";
-          botaoRegistrar.className = "botao-fixo";
-          botaoRegistrar.id = "botao-registrar";
-          botaoRegistrar.onclick = registrarTodos;
-
-          container.appendChild(botaoRegistrar);
-          container.appendChild(botaoAjuda);
-
-          document.getElementById("resultado").after(container);
-        }).responderNome(nomeSelecionado);
+        document.getElementById("botoes-container").appendChild(botaoRegistrar);
       }
+    }).responderNome(nomeSelecionado);
+  }
 
-      function registrarTodos() {
-        const nome = document.getElementById("nome").value;
-        const selects = document.querySelectorAll("select.status-select");
-        const linhas = [];
+  function registrarTodos() {
+    const nome = document.getElementById("nome").value;
+    const selects = document.querySelectorAll("select.status-select");
+    const linhas = [];
 
-        selects.forEach(select => {
-          const row = select.closest("tr");
-          const cells = row.querySelectorAll("td");
+    selects.forEach(select => {
+      const row = select.closest("tr");
+      const cells = row.querySelectorAll("td");
 
-          linhas.push({
-            AREA_HEAD: cells[0].textContent.trim(),
-            IDGROOT: cells[1].textContent.trim(),
-            LDAP: cells[2].textContent.trim(),
-            COLABORADOR: cells[3].textContent.trim(),
-            TURNO: cells[4].textContent.trim(),
-            ESCALA: cells[5].textContent.trim(),
-            TURMA_ESCALA: cells[6].textContent.trim(),
-            EMPRESA: cells[7].textContent.trim(),
-            PROCESSO: cells[8].textContent.trim(),
-            STATUS_HC: cells[9].textContent.trim(),
-            STATUS_abs: select.value
-          });
-        });
+      linhas.push({
+        AREA_HEAD: cells[0].textContent.trim(),
+        IDGROOT: cells[1].textContent.trim(),
+        LDAP: cells[2].textContent.trim(),
+        COLABORADOR: cells[3].textContent.trim(),
+        TURNO: cells[4].textContent.trim(),
+        ESCALA: cells[5].textContent.trim(),
+        TURMA_ESCALA: cells[6].textContent.trim(),
+        EMPRESA: cells[7].textContent.trim(),
+        PROCESSO: cells[8].textContent.trim(),
+        STATUS_HC: cells[9].textContent.trim(),
+        STATUS_abs: select.value
+      });
+    });
 
-        google.script.run.withSuccessHandler(function (mensagem) {
-          alert(mensagem);
-          enviarNome();
-        }).registrarPresenca(nome, linhas);
-      }
+    google.script.run.withSuccessHandler(function (mensagem) {
+      alert(mensagem);
+      enviarNome();
+    }).registrarPresenca(nome, linhas);
+  }
 
-      function fecharModal() {
-        document.getElementById("ajuda-modal").style.display = "none";
-      }
+  function fecharModal() {
+    document.getElementById("ajuda-modal").style.display = "none";
+  }
 
-      function pagehome() { alert("Página Home"); }
-      function pagesobre() { alert("Página Sobre"); }
-      function pagehistorico() { alert("Página Histórico"); }
-      function pagevoltar_ao_site() {
-        window.open("https://sites.google.com/mercadolivre.com/idea-sp10/controles-gerais?authuser=0");
-      }
-    </script>
-
-    <style>
+  function pagehome() { alert("Página Home"); }
+  function pagesobre() { alert("Página Sobre"); }
+  function pagehistorico() { alert("Página Histórico"); }
+  function pagevoltar_ao_site() {
+    window.open("https://sites.google.com/mercadolivre.com/idea-sp10/controles-gerais?authuser=0");
+  }
+</script>
+ <style>
       :root {
         --color1: #f4f4f4;
         --color2: #ffffff;
@@ -415,6 +415,18 @@
     <main>
       <div class="content">
         <h2>Selecione o Team Leader</h2>
+        <div id="ajuda-modal" style="display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5); justify-content: center; align-items: center;">
+          <div class="ajuda-conteudo">
+            <h3>Como funciona o sistema ?</h3>
+            <ul>
+              <li><strong>P</strong> = Presença</li>
+              <li><strong>F</strong> = Falta</li>
+              <li><strong>FE</strong> = Folga Escala</li>
+              <li><strong>AT</strong> = Atestado</li>
+            </ul>
+            <button onclick="fecharModal()">Fechar</button>
+          </div>
+        </div>
         <div class="form-row">
           <select id="nome">
             <option disabled selected>Selecione um nome</option>
@@ -428,17 +440,6 @@
     </main>
 
     <!-- Modal Ajuda -->
-    <div id="ajuda-modal" style="display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5); justify-content: center; align-items: center;">
-      <div class="ajuda-conteudo">
-        <h3>Significados do Status_ABS</h3>
-        <ul>
-          <li><strong>P</strong> = Presença</li>
-          <li><strong>F</strong> = Falta</li>
-          <li><strong>FE</strong> = Folga Escala</li>
-          <li><strong>AT</strong> = Atestado</li>
-        </ul>
-        <button onclick="fecharModal()">Fechar</button>
-      </div>
-    </div>
+    
   </body>
 </html>
