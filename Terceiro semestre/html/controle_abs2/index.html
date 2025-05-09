@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    <title>Controle ABS</title>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        google.script.run.withSuccessHandler(function (teamleaders) {
+          const select = document.getElementById("nome");
+          if (select) {
+            teamleaders.forEach(function (tl) {
+              const option = document.createElement("option");
+              option.value = tl.nome;
+              option.text = tl.nome;
+              select.appendChild(option);
+            });
+          }
+        }).obterTeamLeaders();
+
+        const container = document.createElement("div");
+        container.id = "botoes-container";
+        container.className = "botoes-container";
+
+        const botaoAjuda = document.createElement("div");
+        botaoAjuda.id = "ajuda-botao";
+        botaoAjuda.textContent = "?";
+        botaoAjuda.title = "Clique aqui para entender as siglas do Status_ABS";
+        botaoAjuda.onclick = () => document.getElementById("ajuda-modal").style.display = "flex";
+
+        container.appendChild(botaoAjuda);
+        document.getElementById("resultado").after(container);
+      });
+
+      function enviarNome() {
+        const nomeSelecionado = document.getElementById("nome").value;
+        if (!nomeSelecionado) {
+          alert("Por favor, selecione um Team Leader.");
+          return;
+        }
+
+        google.script.run.withSuccessHandler(function (dados) {
+          if (!dados || dados.length === 0) {
+            alert("Nenhum dado encontrado para este Team Leader.");
+            return;
+          }
+
+          let html = "<table><thead><tr><th>AREA_HEAD</th><th>IDGROOT</th><th>LDAP</th><th>COLABORADOR</th><th>TURNO</th><th>ESCALA</th><th>TURMA_ESCALA</th><th>EMPRESA</th><th>PROCESSO</th><th>STATUS_HC</th><th>STATUS</th></tr></thead><tbody>";
+
+          dados.forEach(linha => {
+            const statusAbs = linha.STATUS_abs || "";
+            const statusHC = (linha.STATUS_HC || "").toUpperCase();
+
+            let classStatusAbs = "";
+            let classStatusHC = "";
+
+            if (statusAbs === "Presente") classStatusAbs = "status-verde";
+            else if (statusAbs === "Afastamento") classStatusAbs = "status-laranja";
+            else if (statusAbs === "Desligado") classStatusAbs = "status-vermelho";
+
+            if (statusHC === "DESLIGADO") classStatusHC = "status-vermelho";
+            else if (statusHC === "AFASTADO" || statusHC === "AFASTADA GRAVIDEZ") classStatusHC = "status-laranja";
+            else if (statusHC === "ATIVO") classStatusHC = "status-verde";
+
+            html += `<tr>
+              <td>${linha.AREA_HEAD}</td><td>${linha.IDGROOT}</td><td>${linha.LDAP}</td><td>${linha.COLABORADOR}</td>
+              <td>${linha.TURNO}</td><td>${linha.ESCALA}</td><td>${linha.TURMA_ESCALA}</td><td>${linha.EMPRESA}</td>
+              <td>${linha.PROCESSO}</td>
+              <td class="${classStatusHC}">${linha.STATUS_HC}</td>
+              <td class="${classStatusAbs}">
+                <select class="status-select">
+                  <option value="">Selecione</option>
+                  <option value="Presente" ${statusAbs === "Presente" ? "selected" : ""}>Presente</option>
+                  <option value="Presenca-HE" ${statusAbs === "Presenca-HE" ? "selected" : ""}>Presença (HE)</option>
+                  <option value="Falta" ${statusAbs === "Falta" ? "selected" : ""}>Falta</option>
+                  <option value="Atestado" ${statusAbs === "Atestado" ? "selected" : ""}>Atestado</option>
+                  <option value="Ferias" ${statusAbs === "Ferias" ? "selected" : ""}>Férias</option>
+                  <option value="Folga-Escala" ${statusAbs === "Folga-Escala" ? "selected" : ""}>Folga Escala</option>
+                  <option value="Afastamento" ${statusAbs === "Afastamento" ? "selected" : ""}>Afastamento</option>
+                  <option value="Atestado-Horas" ${statusAbs === "Atestado-Horas" ? "selected" : ""}>Atestado Horas</option>
+                  <option value="Banco-de-Horas" ${statusAbs === "Banco-de-Horas" ? "selected" : ""}>Banco de Horas</option>
+                  <option value="Fretado" ${statusAbs === "Fretado" ? "selected" : ""}>Fretado</option>
+                  <option value="Licenca" ${statusAbs === "Licenca" ? "selected" : ""}>Licença</option>
+                  <option value="Afastamento-Acd-Trab" ${statusAbs === "Afastamento-Acd-Trab" ? "selected" : ""}>Afastamento Acd Trabalho</option>
+                  <option value="Atestado-Acd-Trab" ${statusAbs === "Atestado-Acd-Trab" ? "selected" : ""}>Atestado Acd Trabalho</option>
+                  <option value="Decl-Medica" ${statusAbs === "Decl-Medica" ? "selected" : ""}>Declaração Médica</option>
+                  <option value="Transferido" ${statusAbs === "Transferido" ? "selected" : ""}>Transferido</option>
+                  <option value="Treinamento-Ext" ${statusAbs === "Treinamento-Ext" ? "selected" : ""}>Treinamento Ext</option>
+                  <option value="Treinamento-Int" ${statusAbs === "Treinamento-Int" ? "selected" : ""}>Treinamento Int</option>
+                  <option value="Treinamento-REP-III" ${statusAbs === "Treinamento-REP-III" ? "selected" : ""}>Treinamento REP III</option>
+                </select>
+              </td>
+            </tr>`;
+
+          });
+
+          html += "</tbody></table>";
+          document.querySelector(".tabela-scroll").innerHTML = html;
+
+          // REINSERE BOTAO DE REGISTRO
+          const botaoExistente = document.getElementById("botao-registrar");
+          if (botaoExistente) botaoExistente.remove();
+
+          const botaoRegistrar = document.createElement("button");
+          botaoRegistrar.textContent = "Registrar Todos";
+          botaoRegistrar.className = "botao-fixo";
+          botaoRegistrar.id = "botao-registrar";
+          botaoRegistrar.onclick = registrarTodos;
+          document.getElementById("botoes-container").appendChild(botaoRegistrar);
+        }).responderNome(nomeSelecionado);
+      }
+
+      function registrarTodos() {
+        const nome = document.getElementById("nome").value;
+        const selects = document.querySelectorAll("select.status-select");
+        const linhas = [];
+
+        selects.forEach(select => {
+          const row = select.closest("tr");
+          const cells = row.querySelectorAll("td");
+          linhas.push({
+            AREA_HEAD: cells[0].textContent.trim(),
+            IDGROOT: cells[1].textContent.trim(),
+            LDAP: cells[2].textContent.trim(),
+            COLABORADOR: cells[3].textContent.trim(),
+            TURNO: cells[4].textContent.trim(),
+            ESCALA: cells[5].textContent.trim(),
+            TURMA_ESCALA: cells[6].textContent.trim(),
+            EMPRESA: cells[7].textContent.trim(),
+            PROCESSO: cells[8].textContent.trim(),
+            STATUS_HC: cells[9].textContent.trim(),
+            STATUS_abs: select.value
+          });
+        });
+
+        google.script.run.withSuccessHandler(function (mensagem) {
+          alert(mensagem);
+          enviarNome();
+        }).registrarPresenca(nome, linhas);
+      }
+    </script>
+    <style>
+      :root {
+        --color1: #f4f4f4;
+        --color2: #ffffff;
+        --color3: #6bc287;
+        --color4: #f4a261;
+        --color5: #0f2e2b;
+      }
+      h2{
+        color:var(--color4);
+      }
+      body {
+        font-family: Arial, sans-serif;
+        background-color: var(--color1);
+        margin: 0;
+        padding: 0;
+      }
+      header {
+        background-color: var(--color2);
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+      }
+      .navbar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80px;
+        padding: 0 20px;
+      }
+      .navbar-content {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        max-width: 1200px;
+        justify-content: space-between;
+      }
+      .navbar h1 {
+        margin: 0;
+        color: var(--color4);
+        font-size: 24px;
+      }
+      .nav {
+        display: flex;
+        gap: 10px;
+      }
+      button {
+        background-color: var(--color3);
+        color: var(--color2);
+        font-weight: bold;
+        border: none;
+        padding: 10px 15px;
+        cursor: pointer;
+        border-radius: 10px;
+      }
+      button:hover {
+        background-color: var(--color5);
+      }
+      main {
+        padding: 120px 20px 20px;
+      }
+      .content {
+        max-width: 90%;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: var(--color2);
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: left;
+      }
+      .form-row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin-top: 20px;
+      }
+      select {
+        padding: 10px;
+        border-radius: 10px;
+        border: 2px solid var(--color3);
+      }
+      .selecionar {
+        background-color: var(--color3);
+        color: var(--color2);
+        font-weight: bold;
+        border: none;
+        padding: 10px 15px;
+        cursor: pointer;
+        border-radius: 10px;
+      }
+      #resultado {
+        margin-top: 20px;
+        text-align: left;
+      }
+      .tabela-scroll {
+        max-height: 400px;
+        overflow-y: auto;
+        margin-top: 10px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 12px;
+      }
+      thead th {
+        position: sticky;
+        top: 0;
+        background-color: var(--color3);
+        color: white;
+        z-index: 1;
+      }
+      th, td {
+        padding: 8px;
+        border: 1px solid #ccc;
+        text-align: center;
+        font-size: 10px;
+      }
+      .status-select {
+        width: 100%;
+      }
+      .botao-fixo {
+        background-color: var(--color3);
+        color: var(--color2);
+        font-weight: bold;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 10px;
+      }
+      .botoes-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 20px;
+        padding: 0 10px;
+      }
+      #ajuda-botao {
+        width: 40px;
+        height: 40px;
+        background-color: var(--color4);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 20px;
+        cursor: pointer;
+        position: relative;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      }
+      #ajuda-modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 3000;
+        justify-content: center;
+        align-items: center;
+      }
+      .ajuda-conteudo {
+        background: white;
+        padding: 20px 30px;
+        border-radius: 10px;
+        max-width: 400px;
+        text-align: left;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      }
+      .ajuda-conteudo h3 {
+        margin-top: 0;
+        color: var(--color4);
+      }
+      .ajuda-conteudo strong {
+        color: var(--color4);
+      }
+      .ajuda-conteudo .presentee {
+        color: var(--color3);
+      }
+
+      .ajuda-conteudo button {
+        background-color: var(--color3);
+        color: var(--color2);
+        font-weight: bold;
+        border: none;
+        padding: 10px 15px;
+        cursor: pointer;
+        border-radius: 10px;
+        margin: 5px 0;
+      }
+      .ajuda-conteudo .fecharmodal {
+        background-color: var(--color3) !important;
+      }
+      .ajuda-conteudo .fecharmodal:hover {
+        background-color: var(--color4) !important;
+      }
+      .status-verde {
+          background-color: #6bc287;
+          color: white;
+          font-weight: bold;
+        }
+        .status-laranja {
+          background-color: #f4a261;
+          color: white;
+          font-weight: bold;
+        }
+        .status-vermelho {
+          background-color: #e76f51;
+          color: white;
+          font-weight: bold;
+        }
+
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <div class="navbar-content">
+          <h1>Controle ABS</h1>
+          <div class="nav">
+            <button onclick="pagehome()">Home</button>
+            <button onclick="pagesobre()">Sobre</button>
+            <button onclick="pagehistorico()">Histórico</button>
+            <button onclick="pagevoltar_ao_site()">Voltar ao site</button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="content">
+        <h2>Selecione o Team Leader</h2>
+        <div id="ajuda-modal">
+          <div class="ajuda-conteudo">
+            <h3>Como funciona o sistema?</h3>
+            <p>Olá, Team Leader! Este sistema foi criado para facilitar e agilizar o processo de chamada da sua equipe.</p>
+            <p>Ao carregar os dados, o sistema exibirá apenas os colaboradores que não registraram o <strong>Clock-in</strong> ao passar na catraca.</p>
+            <p>Esses nomes devem ser justificados manualmente por você, selecionando o motivo da ausência.</p>
+            <p>Já os colaboradores que realizarem corretamente o <strong>Clock-in</strong> serão automaticamente registrados como <strong class="presentee">Presente</strong> sem necessidade de ação adicional.</p>
+            <p>Para entender melhor todas as funcionalidades da ferramenta, acesse o material explicativo completo abaixo:</p>
+
+            <button onclick="materialTutorial()">Ver material</button>
+            <button onclick="fecharModal()" class="fecharmodal">Fechar</button>
+          </div>
+        </div>
+        <div class="form-row">
+          <select id="nome">
+            <option disabled selected>Selecione um nome</option>
+          </select>
+          <button onclick="enviarNome()" class="selecionar">Carregar Equipe</button>
+        </div>
+        <div id="resultado">
+          <div class="tabela-scroll"></div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
