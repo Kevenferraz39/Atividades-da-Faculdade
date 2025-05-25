@@ -10,3 +10,4 @@ expo = n1 ** n2
 
 print('\nA soma é {};\nO produto é {};\nA divisão é {: .2f};'.format(soma, mult, div))
 print('Divisao inteira é {};\nA potência é {};'.format(divI, expo))
+print(f'Divisao inteira é {divI};\nA potência é {expo};')
